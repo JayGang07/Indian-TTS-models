@@ -1,0 +1,81 @@
+# ========================================
+# Indian-TTS-models .gitignore
+# ========================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# --- Virtual Environments ---
+venv/
+env/
+.venv/
+.env/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# --- Secrets & API Keys ---
+*.env
+.env.*
+secrets.yaml
+secrets.json
+
+# --- Large Model Files (do NOT commit these) ---
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.h5
+
+# --- Temporary Files ---
+*.tmp
+*.temp
+*.log
+
+# --- Specific to this project ---
+# Don't commit the Antigravity IDE installer
+Antigravity IDE.exe
+
+# Don't commit stereo calibration data (unrelated to TTS)
+.stereo_calib/
+dataset_*/
+stereo_params.yaml
+stereo-calib.py
+basler_stereo_capture.py
+find_cameras.py
+
+# Don't commit cloned voice outputs (contain personal audio)
+*cloned_output*.wav
+
+# Don't commit demo audio (too large for git)
+Demo-Audio*.wav
+
+# --- Old folder structure (reorganized into samples/ and notebooks/) ---
+/Indic-Parler/
+/Suno-Bark/
+/TTS-Maker/
+/VITS-Rasa/
+/Indian_TTS_Models_Overview.xlsx
+/Testing_Indian_TTS_models.ipynb
