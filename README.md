@@ -34,15 +34,15 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 
 We evaluated **7 TTS models** spanning open-source research models, community models, and commercial API services:
 
-| # | Model | Source | Type | Languages | Voice Cloning | Tested By |
-|:-:|-------|--------|------|-----------|:-------------:|-----------|
-| 1 | **XTTS v2** | [Coqui TTS](https://github.com/coqui-ai/TTS) | Open-source | Multi-lingual (incl. Hindi) | ✅ | Team |
-| 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | Open-source | 1,100+ languages | ❌ | Team |
-| 3 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | Open-source | 13 Indian languages | ❌ | Jay |
-| 4 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Open-source | Indian languages | ❌ | Jay |
-| 5 | **Bhashini (IndicTTS)** | [Bhashini](https://bhashini.gov.in/) | Govt. API | 22 Scheduled languages | ❌ | Team |
-| 6 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ | Jay |
-| 7 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ | Jay |
+| # | Model | Source | Type | Languages | Voice Cloning |
+|:-:|-------|--------|------|-----------|:-------------:|
+| 1 | **XTTS v2** | [Coqui TTS](https://github.com/coqui-ai/TTS) | Open-source | Multi-lingual (incl. Hindi) | ✅ |
+| 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | Open-source | 1,100+ languages | ❌ |
+| 3 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | Open-source | 13 Indian languages | ❌ |
+| 4 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Open-source | Indian languages | ❌ |
+| 5 | **Bhashini (IndicTTS)** | [Bhashini](https://bhashini.gov.in/) | Govt. API | 22 Scheduled languages | ❌ |
+| 6 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ |
+| 7 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
 
 ---
 
@@ -323,11 +323,6 @@ Indian-TTS-models/
 ## 🤝 Team & Acknowledgements
 
 This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Bay Area Advanced Analytics**.
-
-### Contributors
-<!-- Add your team members here -->
-- **Jay** — Indic Parler-TTS, VITS Rasa 13, Suno Bark, TTSMaker
-- *[Add teammate names and their contributions]*
 
 ### Acknowledgements
 - [AI4Bharat](https://ai4bharat.org/) for Indic Parler-TTS and VITS Rasa models
