@@ -209,7 +209,9 @@ samples/
 │   ├── ttsmaker-female.mp3
 │   └── ttsmaker-male.mp3
 ├── xtts-v2/
+│   └── xtts_v2_male_hindi.wav
 ├── meta-mms/
+│   └── mms_male_hindi.wav
 └── bhashini/
 ```
 
