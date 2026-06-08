@@ -40,9 +40,8 @@ We evaluated **7 TTS models** spanning open-source research models, community mo
 | 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | Open-source | 1,100+ languages | ❌ |
 | 3 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | Open-source | 13 Indian languages | ❌ |
 | 4 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Open-source | Indian languages | ❌ |
-| 5 | **Bhashini (IndicTTS)** | [Bhashini](https://bhashini.gov.in/) | Govt. API | 22 Scheduled languages | ❌ |
-| 6 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ |
-| 7 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
+| 5 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ |
+| 6 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
 
 ---
 
@@ -189,21 +188,14 @@ sf.write("output.wav", audio, model.config.sampling_rate)
 ```
 </details>
 
-### 5. Bhashini (IndicTTS)
-- **Architecture:** Govt. of India's Digital India Bhashini platform API
-- **Key Feature:** Official support for all 22 Scheduled Languages of India
-- **Indian Language Support:** All 22 official Indian languages
-- **Hardware:** API-based (no local hardware needed)
-- **Notebook:** [`notebooks/bhashini_indictts.ipynb`](notebooks/bhashini_indictts.ipynb)
-
-### 6. TTSMaker
+### 5. TTSMaker
 - **Architecture:** Commercial cloud-based TTS API
 - **Key Feature:** Easy to use, multiple voice styles, no coding needed for basic use
 - **Indian Language Support:** Hindi (and other languages)
 - **Hardware:** API-based (no local hardware needed)
 - **Samples:** [`samples/tts-maker/`](samples/tts-maker/)
 
-### 7. Suno Bark
+### 6. Suno Bark
 - **Architecture:** Transformer-based text-to-audio model
 - **Key Feature:** Can generate speech, music, and sound effects; supports multilingual synthesis
 - **Indian Language Support:** Hindi (via multilingual capability)
@@ -234,7 +226,6 @@ samples/
 │   └── xtts_v2_male_hindi.wav
 ├── meta-mms/
 │   └── mms_male_hindi.wav
-└── bhashini/
 ```
 
 **Test Sentence (Hindi):**
@@ -296,8 +287,7 @@ Indian-TTS-models/
 │   ├── vits_rasa_13.ipynb           # VITS Rasa 13 testing
 │   ├── suno_bark.ipynb              # Suno Bark testing
 │   ├── xtts_v2.ipynb                # XTTS v2 testing
-│   ├── meta_mms.ipynb               # Meta MMS testing
-│   └── bhashini_indictts.ipynb      # Bhashini IndicTTS testing
+│   └── meta_mms.ipynb               # Meta MMS testing
 │
 ├── samples/                         # Generated audio samples
 │   ├── indic-parler/                # Indic Parler-TTS outputs
@@ -305,8 +295,7 @@ Indian-TTS-models/
 │   ├── suno-bark/                   # Suno Bark outputs
 │   ├── tts-maker/                   # TTSMaker outputs
 │   ├── xtts-v2/                     # XTTS v2 outputs
-│   ├── meta-mms/                    # Meta MMS outputs
-│   └── bhashini/                    # Bhashini IndicTTS outputs
+│   └── meta-mms/                    # Meta MMS outputs
 │
 ├── docs/                            # Documentation & reports
 │   └── Indian_TTS_Models_Overview.xlsx  # Comparison spreadsheet
@@ -336,7 +325,6 @@ Indian-TTS-models/
 | **Meta MMS** | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
 | **VITS Rasa 13** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 | **Indic Parler-TTS** | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
-| **Bhashini** | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **TTSMaker** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **Suno Bark** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
 
@@ -353,7 +341,6 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Hugging Face](https://huggingface.co/) for model hosting and the Transformers library
 - [Meta Research](https://ai.meta.com/) for MMS
 - [Suno AI](https://www.suno.ai/) for Bark
-- [Bhashini / Digital India](https://bhashini.gov.in/) for IndicTTS API
 
 ---
 
@@ -368,7 +355,6 @@ This project is for **research and educational purposes** only. Individual model
 | VITS Rasa 13 | MIT |
 | Indic Parler-TTS | Apache 2.0 |
 | Suno Bark | MIT |
-| Bhashini | Govt. API Terms |
 | TTSMaker | Commercial Terms |
 
 ---
