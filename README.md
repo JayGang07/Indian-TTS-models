@@ -79,6 +79,28 @@ Each model is evaluated against the following criteria:
 - **Hardware:** Requires GPU (T4 or better recommended)
 - **Notebook:** [`notebooks/xtts_v2.ipynb`](notebooks/xtts_v2.ipynb)
 
+<details>
+<summary>📝 Code Example</summary>
+
+```python
+import torch
+import os
+from TTS.api import TTS
+
+os.environ["COQUI_TOS_AGREED"] = "1"
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to(device)
+
+tts.tts_to_file(
+    text="हैलो, मेरा नाम जय है।",
+    speaker_wav="reference_audio.wav",
+    language="hi",
+    file_path="xtts_output.wav"
+)
+```
+</details>
+
 ### 2. Meta MMS (Massively Multilingual Speech)
 - **Architecture:** VITS-based model trained on 1,100+ languages
 - **Key Feature:** Broadest language coverage of any TTS model
