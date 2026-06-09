@@ -41,7 +41,8 @@ We evaluated **7 TTS models** spanning open-source research models, community mo
 | 3 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | Open-source | 13 Indian languages | ❌ |
 | 4 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Open-source | Indian languages | ❌ |
 | 5 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | Open-source | Multi-lingual (incl. Hindi) | ❌ |
-| 6 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
+| 6 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ |
+| 7 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
 
 ---
 
@@ -228,7 +229,14 @@ if audio_pieces:
 ```
 </details>
 
-### 6. Suno Bark
+### 6. TTSMaker
+- **Architecture:** Commercial cloud-based TTS API
+- **Key Feature:** Easy to use, multiple voice styles, no coding needed for basic use
+- **Indian Language Support:** Hindi (and other languages)
+- **Hardware:** API-based (no local hardware needed)
+- **Samples:** [`samples/tts-maker/`](samples/tts-maker/)
+
+### 7. Suno Bark
 - **Architecture:** Transformer-based text-to-audio model
 - **Key Feature:** Can generate speech, music, and sound effects; supports multilingual synthesis
 - **Indian Language Support:** Hindi (via multilingual capability)
@@ -255,6 +263,9 @@ samples/
 ├── kokoro/
 │   ├── kokoro_female.wav
 │   └── kokoro_male.wav
+├── tts-maker/
+│   ├── ttsmaker-female.mp3
+│   └── ttsmaker-male.mp3
 ├── xtts-v2/
 │   └── xtts_v2_male_hindi.wav
 ├── meta-mms/
@@ -335,6 +346,7 @@ Indian-TTS-models/
 │   ├── vits-rasa/
 │   ├── suno-bark/
 │   ├── kokoro/
+│   ├── tts-maker/
 │   ├── xtts-v2/
 │   └── meta-mms/
 │
@@ -364,6 +376,7 @@ Indian-TTS-models/
 | **VITS Rasa 13** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 | **Indic Parler-TTS** | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
 | **Kokoro** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **TTSMaker** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **Suno Bark** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
 
 > **Note:** These are preliminary subjective ratings based on initial testing. A formal MOS study is planned.
@@ -394,6 +407,7 @@ This project is for **research and educational purposes** only. Individual model
 | Indic Parler-TTS | Apache 2.0 |
 | Suno Bark | MIT |
 | Kokoro | Apache 2.0 |
+| TTSMaker | Commercial Terms |
 
 ---
 
