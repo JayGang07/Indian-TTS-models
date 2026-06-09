@@ -40,7 +40,7 @@ We evaluated **7 TTS models** spanning open-source research models, community mo
 | 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | Open-source | 1,100+ languages | ❌ |
 | 3 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | Open-source | 13 Indian languages | ❌ |
 | 4 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Open-source | Indian languages | ❌ |
-| 5 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ |
+| 5 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | Open-source | Multi-lingual (incl. Hindi) | ❌ |
 | 6 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
 
 ---
@@ -66,6 +66,17 @@ Each model is evaluated against the following criteria:
 | **Multi-Speaker** | Are male/female voices distinguishable and natural? |
 | **Code-Mixing** | How well does it handle Hindi-English mixed text? |
 | **Voice Cloning** | Can it replicate a target speaker's voice? |
+
+---
+
+## 📈 Evaluation Results
+
+We evaluated the top performing models (VITS Rasa 13, Meta MMS, and Kokoro) against the **AI4Bharat IndicVoices-R** dataset. Detailed results and scoring can be found in our comprehensive spreadsheet and CSV files:
+- [`docs/Indian_TTS_Models_Overview.xlsx`](docs/Indian_TTS_Models_Overview.xlsx)
+- [`docs/IndicVoices_VITS_Evaluation.csv`](docs/IndicVoices_VITS_Evaluation.csv)
+- [`docs/Kokoro_Evaluation_Results.csv`](docs/Kokoro_Evaluation_Results.csv)
+
+The [`notebooks/Evaluating_TTS_models.ipynb`](notebooks/Evaluating_TTS_models.ipynb) notebook contains the full pipeline used to process and score these datasets automatically. Note that commercial freemium APIs (such as TTSMaker) were excluded from bulk evaluation due to API cost limits.
 
 ---
 
@@ -188,12 +199,34 @@ sf.write("output.wav", audio, model.config.sampling_rate)
 ```
 </details>
 
-### 5. TTSMaker
-- **Architecture:** Commercial cloud-based TTS API
-- **Key Feature:** Easy to use, multiple voice styles, no coding needed for basic use
-- **Indian Language Support:** Hindi (and other languages)
-- **Hardware:** API-based (no local hardware needed)
-- **Samples:** [`samples/tts-maker/`](samples/tts-maker/)
+### 5. Kokoro (82M)
+- **Architecture:** Lightweight TTS model based on StyleTTS architecture (82 million parameters)
+- **Key Feature:** Extremely fast generation, high quality, and supports multiple voices and languages natively
+- **Indian Language Support:** Hindi (via `lang_code='h'`)
+- **Hardware:** Can run efficiently on CPU, blazingly fast on GPU
+- **Notebook / Script:** Evaluated in [`notebooks/VITS_rasa_finetune.ipynb`](notebooks/VITS_rasa_finetune.ipynb)
+- **Samples:** [`samples/kokoro/`](samples/kokoro/)
+
+<details>
+<summary>📝 Code Example</summary>
+
+```python
+import numpy as np
+import soundfile as sf
+from kokoro import KPipeline
+
+pipeline = KPipeline(lang_code='h') # 'h' for Hindi
+prompt_text = "हैलो, मेरा नाम जय है।"
+voice_id = "hm_omega" # Male voice
+
+generator = pipeline(prompt_text, voice=voice_id, speed=1.0)
+audio_pieces = [audio for _, _, audio in generator]
+
+if audio_pieces:
+    final_audio = np.concatenate(audio_pieces)
+    sf.write("kokoro_output.wav", final_audio, 24000)
+```
+</details>
 
 ### 6. Suno Bark
 - **Architecture:** Transformer-based text-to-audio model
@@ -219,9 +252,9 @@ samples/
 ├── suno-bark/
 │   ├── bark_hindi_female.wav
 │   └── bark_hindi_male.wav
-├── tts-maker/
-│   ├── ttsmaker-female.mp3
-│   └── ttsmaker-male.mp3
+├── kokoro/
+│   ├── kokoro_female.wav
+│   └── kokoro_male.wav
 ├── xtts-v2/
 │   └── xtts_v2_male_hindi.wav
 ├── meta-mms/
@@ -282,23 +315,28 @@ Indian-TTS-models/
 ├── requirements.txt                 # Python dependencies
 ├── .gitignore                       # Git ignore rules
 │
-├── notebooks/                       # Jupyter notebooks for each model
-│   ├── indic_parler_tts.ipynb       # Indic Parler-TTS testing
-│   ├── vits_rasa_13.ipynb           # VITS Rasa 13 testing
-│   ├── suno_bark.ipynb              # Suno Bark testing
-│   ├── xtts_v2.ipynb                # XTTS v2 testing
-│   └── meta_mms.ipynb               # Meta MMS testing
+├── docs/                            # Documentation, datasets & evaluation results
+│   ├── Indian_TTS_Models_Overview.xlsx
+│   ├── IndicVoices_VITS_Evaluation.csv
+│   ├── Kokoro_Evaluation_Results.csv
+│   └── IndicVoices_Audio.zip
+│
+├── notebooks/                       # Jupyter notebooks
+│   ├── Evaluating_TTS_models.ipynb  # Bulk evaluation pipeline
+│   ├── VITS_rasa_finetune.ipynb     # VITS & Kokoro testing script
+│   ├── indic_parler_tts.ipynb
+│   ├── vits_rasa_13.ipynb
+│   ├── suno_bark.ipynb
+│   ├── xtts_v2.ipynb
+│   └── meta_mms.ipynb
 │
 ├── samples/                         # Generated audio samples
-│   ├── indic-parler/                # Indic Parler-TTS outputs
-│   ├── vits-rasa/                   # VITS Rasa 13 outputs
-│   ├── suno-bark/                   # Suno Bark outputs
-│   ├── tts-maker/                   # TTSMaker outputs
-│   ├── xtts-v2/                     # XTTS v2 outputs
-│   └── meta-mms/                    # Meta MMS outputs
-│
-├── docs/                            # Documentation & reports
-│   └── Indian_TTS_Models_Overview.xlsx  # Comparison spreadsheet
+│   ├── indic-parler/
+│   ├── vits-rasa/
+│   ├── suno-bark/
+│   ├── kokoro/
+│   ├── xtts-v2/
+│   └── meta-mms/
 │
 └── assets/                          # Images, diagrams for README
 ```
@@ -325,7 +363,7 @@ Indian-TTS-models/
 | **Meta MMS** | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
 | **VITS Rasa 13** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 | **Indic Parler-TTS** | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
-| **TTSMaker** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Kokoro** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **Suno Bark** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
 
 > **Note:** These are preliminary subjective ratings based on initial testing. A formal MOS study is planned.
@@ -355,7 +393,7 @@ This project is for **research and educational purposes** only. Individual model
 | VITS Rasa 13 | MIT |
 | Indic Parler-TTS | Apache 2.0 |
 | Suno Bark | MIT |
-| TTSMaker | Commercial Terms |
+| Kokoro | Apache 2.0 |
 
 ---
 
