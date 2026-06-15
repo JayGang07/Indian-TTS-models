@@ -220,7 +220,7 @@ sf.write("output.wav", audio, model.config.sampling_rate)
 - **Key Feature:** Extremely fast generation, high quality, and supports multiple voices and languages natively
 - **Indian Language Support:** Hindi (via `lang_code='h'`)
 - **Hardware:** Can run efficiently on CPU, blazingly fast on GPU
-- **Notebook / Script:** Evaluated in [`notebooks/VITS_rasa_finetune.ipynb`](notebooks/VITS_rasa_finetune.ipynb)
+- **Notebook / Script:** [`TTS/kokoro/kokoro.ipynb`](TTS/kokoro/kokoro.ipynb)
 - **Samples:** [`samples/kokoro/`](samples/kokoro/)
 
 <details>
@@ -340,6 +340,20 @@ Indian-TTS-models/
 ├── README.md                        # This file
 ├── requirements.txt                 # Python dependencies
 ├── .gitignore                       # Git ignore rules
+│
+├── TTS/                             # Model-specific notebooks & evaluation data
+│   ├── kokoro/
+│   │   ├── kokoro.ipynb             # Kokoro TTS evaluation notebook
+│   │   ├── kokoro_hindi_eval_results.csv
+│   │   ├── kokoro_hindi_audio.zip
+│   │   ├── kokoro_hindi_dashboard.png
+│   │   └── kokoro_category_difficulty.png
+│   ├── meta's mtts/
+│   │   ├── Meta_MMS.ipynb
+│   │   └── mtts-male_hindi.wav
+│   └── xtts/
+│       ├── xtts.ipynb
+│       └── xtts_male_hindi.wav
 │
 ├── docs/                            # Documentation, datasets & evaluation results
 │   ├── Indian_TTS_Models_Overview.xlsx
