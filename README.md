@@ -70,7 +70,7 @@ Each model is evaluated against the following criteria:
 
 ---
 
-## 📈 Evaluation Results
+## 📈 Large-Scale Dataset Evaluation
 
 We evaluated the top performing models (VITS Rasa 13, Meta MMS, and Kokoro) against the **AI4Bharat IndicVoices-R** dataset. Detailed results and scoring can be found in our comprehensive spreadsheet and CSV files:
 - [`docs/Indian_TTS_Models_Overview.xlsx`](docs/Indian_TTS_Models_Overview.xlsx)
@@ -78,6 +78,21 @@ We evaluated the top performing models (VITS Rasa 13, Meta MMS, and Kokoro) agai
 - [`docs/Kokoro_Evaluation_Results.csv`](docs/Kokoro_Evaluation_Results.csv)
 
 The [`notebooks/Evaluating_TTS_models.ipynb`](notebooks/Evaluating_TTS_models.ipynb) notebook contains the full pipeline used to process and score these datasets automatically. Note that commercial freemium APIs (such as TTSMaker) were excluded from bulk evaluation due to API cost limits.
+
+---
+
+## 🗣️ Phonetically Balanced Evaluation
+
+In addition to large-scale datasets, we constructed a **Custom Phonetically Balanced Hindi Dataset** (`hindi_evaluation_set.json`) to rigorously test each model's pronunciation of challenging phonemes, including:
+- Vowels and Consonants
+- Velars and Gutturals
+- Retroflexes
+- Palatals and Nasals
+- Labials and Aspirated sounds
+
+All results, including the generated audio and the automated Whisper ASR transcription scores, are available in the [`phonetic_evaluation/`](phonetic_evaluation/) directory.
+
+*Note: The Kokoro model has not yet been benchmarked against this specific phonetic dataset.*
 
 ---
 
@@ -331,6 +346,13 @@ Indian-TTS-models/
 │   ├── IndicVoices_VITS_Evaluation.csv
 │   ├── Kokoro_Evaluation_Results.csv
 │   └── IndicVoices_Audio.zip
+│
+├── phonetic_evaluation/             # Custom phonetically balanced dataset & results
+│   ├── dataset/
+│   │   └── hindi_evaluation_set.json
+│   └── results/
+│       ├── *_audio_results.zip      # Generated audio per model
+│       └── *_whisper_evaluation.csv # ASR evaluation scores
 │
 ├── notebooks/                       # Jupyter notebooks
 │   ├── Evaluating_TTS_models.ipynb  # Bulk evaluation pipeline
