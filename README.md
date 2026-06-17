@@ -297,43 +297,64 @@ The repository is organized functionally by **model**:
 
 ```text
 Indian-TTS-models/
-├── README.md      # This presentation document
-├── requirements.txt     # Python dependencies
-├── .gitignore      # Git ignore rules
+├── README.md                          # This presentation document
+├── requirements.txt                   # Python dependencies
+├── .gitignore                         # Git ignore rules
 │
-├── datasets/      # Large testing datasets
-│ ├── dataset_48.5_41.5.zip
-│ ├── hindi_evaluation_set.json
-│ └── IndicVoices_Audio.zip
+├── datasets/                          # Large testing datasets
+│   ├── dataset_48.5_41.5.zip
+│   └── hindi_evaluation_set.json      # Custom phonetically balanced Hindi dataset
 │
-├── docs/       # Documentation & overview spreadsheets
-│ ├── Indian_TTS_Models_Overview.xlsx
-│ ├── IndicVoices_VITS_Evaluation.csv
-│ └── Kokoro_Evaluation_Results.csv
+├── docs/                              # Project-level documentation
+│   └── Indian_TTS_Models_Overview.xlsx
 │
-├── models/       # The Core Model Workspaces
-│ ├── indic-parler/
-│ ├── kokoro/
-│ │ ├── notebooks/
-│ │ ├── samples/
-│ │ ├── phonetic_evaluation/  # ASR evaluation CSVs and result ZIPs
-│ │ └── assets/     # Visual Dashboards
-│ ├── meta-mms/
-│ ├── suno-bark/
-│ ├── tts-maker/
-│ ├── vits-rasa/
-│ └── voice_cloning/
-│  ├── xtts-v2/     # Isolated workspace for zero-shot cloning
-│  ├── kokoclone/    # Kokoro + voice cloning
-│  │ ├── notebooks/
-│  │ └── outputs/
-│  └── spark-tts/    # Spark-TTS voice cloning
-│   ├── notebooks/
-│   └── outputs/
+├── models/                            # The Core Model Workspaces
+│   ├── indic-parler/
+│   │   ├── notebooks/                 # indic_parler_tts.ipynb
+│   │   ├── samples/                   # Male & female Hindi audio samples
+│   │   └── phonetic_evaluation/       # Whisper ASR evaluation CSV + audio ZIP
+│   │
+│   ├── kokoro/
+│   │   ├── notebooks/                 # kokoro.ipynb
+│   │   ├── samples/                   # Male & female Hindi audio samples
+│   │   ├── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
+│   │   └── assets/                    # Visual dashboards (PNG)
+│   │
+│   ├── meta-mms/
+│   │   ├── notebooks/                 # Meta_MMS.ipynb
+│   │   ├── samples/                   # Hindi audio sample
+│   │   └── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
+│   │
+│   ├── suno-bark/
+│   │   ├── samples/                   # Male & female Hindi audio samples
+│   │   └── phonetic_evaluation/       # Whisper ASR evaluation CSV + audio ZIP
+│   │
+│   ├── tts-maker/
+│   │   └── samples/                   # Male & female Hindi audio samples (MP3)
+│   │
+│   ├── vits-rasa/
+│   │   ├── notebooks/                 # vits_rasa_13.ipynb
+│   │   ├── samples/                   # Male & female Hindi audio samples
+│   │   └── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
+│   │
+│   └── voice_cloning/                 # Voice Cloning Models
+│       ├── xtts-v2/
+│       │   ├── notebooks/             # xtts.ipynb, xtts_v2.ipynb
+│       │   ├── samples/               # Hindi audio samples
+│       │   └── phonetic_evaluation/   # Whisper ASR evaluation CSV + audio ZIP
+│       │
+│       ├── kokoclone/
+│       │   ├── notebooks/             # kokoclone.ipynb
+│       │   └── outputs/               # Evaluation output ZIP
+│       │
+│       └── spark-tts/
+│           ├── notebooks/             # spark_tts.ipynb
+│           └── outputs/               # TTS output ZIP
 │
-└── utility_notebooks/    # Bulk testing and evaluation scripts
- ├── Evaluating_TTS_models.ipynb
- └── Testing_Indian_TTS_models.ipynb
+└── utility_notebooks/                 # Bulk testing and evaluation scripts
+    ├── Evaluating_TTS_models.ipynb
+    ├── Testing_Indian_TTS_models.ipynb
+    └── VITS_rasa_finetune.ipynb       # Cross-model evaluation (VITS Rasa + Kokoro)
 ```
 
 ---
