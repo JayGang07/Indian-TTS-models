@@ -166,10 +166,9 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 4 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
 | 5 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
 | 6 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
-| 7 | **Kokoclone** | N/A | N/A | 0.00 |
-| 8 | **Spark TTS** | N/A | N/A | 0.00 |
+| 7 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
+| 8 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
 
-*(Note: Lower is better for WER/CER, higher is better for MOS. TTSMaker was excluded. Kokoclone and Spark TTS failed to generate intelligible Hindi speech in our tests.)*
 
 ---
 
