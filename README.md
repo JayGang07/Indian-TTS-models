@@ -210,7 +210,7 @@ The pipeline utilizes OpenAI's Whisper model for robust ASR transcription. Whisp
 | **medium** | 769 M | `medium.en` | ~5 GB | 1.5 GiB | ~2.1 GB | ~2x | ~2.9% | ~5% |
 | **large-v2** | 1,550 M | N/A | ~10 GB | 2.9 GiB | ~3.9 GB | 1x | ~2.7% | ~4% |
 | **large-v3** | 1,550 M | N/A | ~10 GB | 2.9 GiB | ~3.9 GB | 1x | ~2.4% | ~3.5% |
-| **turbo** | 809 M | N/A | ~6 GB | 1.6 GiB | ~2.3 GB | ~8x | ~2.5% | ~3.7% |
+
 
 ### Understanding Error Metrics (WER & CER)
 
