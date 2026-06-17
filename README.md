@@ -32,7 +32,7 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 
 ## 🧠 Models Tested
 
-We evaluated **7 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **9 TTS models** spanning open-source research models, community models, and commercial API services:
 
 | # | Model | Source | Type | Languages | Voice Cloning |
 |:-:|-------|--------|------|-----------|:-------------:|
@@ -43,6 +43,8 @@ We evaluated **7 TTS models** spanning open-source research models, community mo
 | 5 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | Open-source | Multi-lingual (incl. Hindi) | ❌ |
 | 6 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | Multi-lingual (incl. Hindi) | ❌ |
 | 7 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Open-source | Multi-lingual | ✅ |
+| 8 | **Spark TTS** | [SparkAudio](https://github.com/SparkAudio/Spark-TTS) | Open-source | Multi-lingual (incl. Hindi) | ✅ |
+| 9 | **KokoClone** | [Kokoro + Voice Cloning](https://huggingface.co/hexgrad/Kokoro-82M) | Open-source | Multi-lingual (incl. Hindi) | ✅ |
 
 ---
 
@@ -258,6 +260,22 @@ if audio_pieces:
 - **Hardware:** GPU recommended (T4 or better)
 - **Notebook:** [`notebooks/suno_bark.ipynb`](notebooks/suno_bark.ipynb)
 
+### 8. Spark TTS
+- **Architecture:** BiCodec-based TTS with voice cloning via audio prompts
+- **Key Feature:** High-fidelity voice cloning and controllable speech generation with natural prosody
+- **Indian Language Support:** Hindi (via multi-lingual capability)
+- **Hardware:** GPU recommended (T4 or better)
+- **Notebook:** [`TTS/spark tts/spark_tts.ipynb`](TTS/spark%20tts/spark_tts.ipynb)
+- **Outputs:** [`TTS/spark tts/spark_tts_outputs.zip`](TTS/spark%20tts/spark_tts_outputs.zip)
+
+### 9. KokoClone (Kokoro + Voice Cloning)
+- **Architecture:** Kokoro-82M extended with voice cloning capabilities using speaker embeddings
+- **Key Feature:** Combines Kokoro's fast, high-quality synthesis with zero-shot voice cloning
+- **Indian Language Support:** Hindi (via `lang_code='h'`)
+- **Hardware:** GPU recommended for voice cloning, CPU for inference
+- **Notebook:** [`TTS/kokoclone/kokoclone.ipynb`](TTS/kokoclone/kokoclone.ipynb)
+- **Outputs:** [`TTS/kokoclone/kokoclone_evaluation_outputs.zip`](TTS/kokoclone/kokoclone_evaluation_outputs.zip)
+
 ---
 
 ## 🎧 Sample Audio Outputs
@@ -348,6 +366,12 @@ Indian-TTS-models/
 │   │   ├── kokoro_hindi_audio.zip
 │   │   ├── kokoro_hindi_dashboard.png
 │   │   └── kokoro_category_difficulty.png
+│   ├── kokoclone/
+│   │   ├── kokoclone.ipynb          # KokoClone voice cloning notebook
+│   │   └── kokoclone_evaluation_outputs.zip
+│   ├── spark tts/
+│   │   ├── spark_tts.ipynb          # Spark TTS evaluation notebook
+│   │   └── spark_tts_outputs.zip
 │   ├── meta's mtts/
 │   │   ├── Meta_MMS.ipynb
 │   │   └── mtts-male_hindi.wav
@@ -414,6 +438,8 @@ Indian-TTS-models/
 | **Kokoro** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **TTSMaker** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | **Suno Bark** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| **Spark TTS** | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| **KokoClone** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 
 > **Note:** These are preliminary subjective ratings based on initial testing. A formal MOS study is planned.
 
@@ -443,6 +469,8 @@ This project is for **research and educational purposes** only. Individual model
 | Indic Parler-TTS | Apache 2.0 |
 | Suno Bark | MIT |
 | Kokoro | Apache 2.0 |
+| Spark TTS | Apache 2.0 |
+| KokoClone | Apache 2.0 |
 | TTSMaker | Commercial Terms |
 
 ---
