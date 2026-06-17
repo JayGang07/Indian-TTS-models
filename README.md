@@ -150,6 +150,47 @@ graph TD
  E --> G[Character Error Rate]
 ```
 
+### Whisper ASR Transcription Engine
+
+The pipeline utilizes OpenAI's Whisper model for robust ASR transcription. Whisper is available in multiple model sizes depending on the hardware and accuracy requirements:
+
+1. **Tiny (39M parameters)**: The fastest and most lightweight model. Excellent for fast note-taking or low-power devices, but prone to higher error rates on complex audio.
+2. **Base (74M parameters)**: A great balance of speed and size. Requires very little memory and transcribes quickly on almost any hardware.
+3. **Small (244M parameters)**: Highly recommended for a mix of good transcription accuracy and reasonable processing time on modern computers.
+4. **Medium (769M parameters)**: Offers high accuracy and handles background noise well, but requires a dedicated GPU or more powerful processors to run smoothly.
+5. **Large (1.55B parameters)**: The most accurate and robust model, perfect for professional transcriptions. It features three iterations:
+   - **large-v1 & large-v2**: Previous iterations of the large model.
+   - **large-v3**: The latest standard large release, trained on more diverse datasets for superior multilingual accuracy.
+
+### Understanding Error Metrics (WER & CER)
+
+#### Word Error Rate (WER)
+When WER is calculated, the errors are further broken down into:
+1. **Substitutions (S)**: The TTS engine mispronounces a word, causing the ASR to hear a completely different word (e.g., saying “cataracts” instead of “Cadillac”).
+2. **Deletions (D)**: The TTS cuts off early or skips a word completely.
+3. **Insertions (I)**: The TTS model hallucinates or adds extra words, filler syllables, or stammers.
+
+$$WER = \frac{S + I + D}{N} \times 100$$
+
+> **Note:** In modern TTS development, a low WER indicates the audio is highly intelligible. However, WER does not measure voice naturalness, emotion, or prosody—a robotic-sounding voice can still be highly intelligible with a 0% WER.
+
+#### Character Error Rate (CER)
+The CER formula is a metric used to evaluate the accuracy of AI text models, speech-to-text, and OCR software by measuring character-level differences.
+
+$$CER = \frac{S + D + I}{N}$$
+
+**Where:**
+- **S** = Substitutions (wrong characters in place of correct ones)
+- **D** = Deletions (characters missing from the AI output)
+- **I** = Insertions (extra characters incorrectly added to the output)
+- **N** = Total number of characters in the original, correct reference text
+
+**How to Calculate It:**
+1. Align the AI's output with the correct, human-verified reference text.
+2. Count the minimum number of single-character edits (S + D + I) needed to change the output into the reference text.
+3. Divide this sum by the total length of the reference text (N).
+4. Multiply by 100 to get a percentage.
+
 ---
 
 ## Detailed Model Breakdowns
@@ -266,3 +307,13 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Meta Research](https://ai.meta.com/) for MMS
 - [Suno AI](https://www.suno.ai/) for Bark
 - [Hexgrad](https://huggingface.co/hexgrad) for the amazing Kokoro-82M model
+
+---
+
+## References
+
+- [Whisper Speech Recognition Model Capable of Recognizing 99 Languages](https://medium.com/axinc-ai/whisper-speech-recognition-model-capable-of-recognizing-99-languages-5b5cf0197c16)
+- [Arxiv Paper 2501.00425](https://arxiv.org/abs/2501.00425)
+- [Whisper Model Sizes Explained](https://openwhispr.com/blog/whisper-model-sizes-explained)
+- [Whisper Models Directory](https://whisper-api.com/blog/models/)
+- [Springer Link Reference](https://link.springer.com/chapter/10.1007/978-981-96-6960-8_6)
