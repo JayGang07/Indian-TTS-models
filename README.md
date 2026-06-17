@@ -154,20 +154,22 @@ To thoroughly compare these models, we relied on a combination of human-centric 
 
 ## Quantitative Evaluation Results
 
-We processed the generated audio through an automated **Whisper ASR pipeline** to compute the Word Error Rate (WER) and Character Error Rate (CER).
+We evaluated the models through an automated **Whisper ASR pipeline** to compute the objective metrics — Word Error Rate (WER) and Character Error Rate (CER) — alongside human-evaluated Mean Opinion Score (MOS) for subjective quality.
 
 ### Model Leaderboard (Hindi Phonetics)
 
-| Rank | Model | Word Error Rate (WER) | Character Error Rate (CER) |
-|:----:|-------|:---------------------:|:--------------------------:|
-| 1 | **Kokoro** | **0.359** | **0.129** |
-| 2 | **XTTS v2** | 0.525 | 0.217 |
-| 3 | **Meta MMS** | 0.566 | 0.209 |
-| 4 | **VITS Rasa 13** | 0.573 | 0.232 |
-| 5 | **Suno Bark** | 0.616 | 0.292 |
-| 6 | **Indic Parler-TTS** | 0.892 | 0.645 |
+| Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
+|:----:|-------|:---------------:|:---------------:|:----------------:|
+| 1 | **Kokoro** | **0.359** | **0.129** | **4.65** |
+| 2 | **Suno Bark** | 0.616 | 0.292 | 4.11 |
+| 3 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
+| 4 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
+| 5 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
+| 6 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
+| 7 | **Kokoclone** | N/A | N/A | 0.00 |
+| 8 | **Spark TTS** | N/A | N/A | 0.00 |
 
-*(Note: Lower is better. TTSMaker was excluded from bulk automated evaluation due to API constraints.)*
+*(Note: Lower is better for WER/CER, higher is better for MOS. TTSMaker was excluded. Kokoclone and Spark TTS failed to generate intelligible Hindi speech in our tests.)*
 
 ---
 
