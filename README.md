@@ -23,6 +23,9 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 
 ## Models Tested
 
+> [!NOTE]
+> For a comprehensive overview, including detailed features and comparisons, view the **[Indian TTS Models Overview Spreadsheet](https://docs.google.com/spreadsheets/d/1lPsC1ouOFhUqIAKhp-tiZ-qPhk6zHms_j6_Iq5txx0g/edit?gid=37611081#gid=37611081)**.
+
 We evaluated **8 TTS models** spanning open-source research models, community models, and commercial API services:
 
 | # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning |
