@@ -200,6 +200,18 @@ The pipeline utilizes OpenAI's Whisper model for robust ASR transcription. Whisp
    - **large-v1 & large-v2**: Previous iterations of the large model.
    - **large-v3**: The latest standard large release, trained on more diverse datasets for superior multilingual accuracy.
 
+#### Whisper Models Hardware & Performance Breakdown
+
+| Model | Params | English-Only | VRAM (GPU) | GGML Disk | RAM (whisper.cpp) | Speed | English WER | Multilingual WER |
+|---|---|---|---|---|---|---|---|---|
+| **tiny** | 39 M | `tiny.en` | ~1 GB | 75 MiB | ~273 MB | ~10x | ~7.6% | ~12% |
+| **base** | 74 M | `base.en` | ~1 GB | 142 MiB | ~388 MB | ~7x | ~5.0% | ~10% |
+| **small** | 244 M | `small.en` | ~2 GB | 466 MiB | ~852 MB | ~4x | ~3.4% | ~7% |
+| **medium** | 769 M | `medium.en` | ~5 GB | 1.5 GiB | ~2.1 GB | ~2x | ~2.9% | ~5% |
+| **large-v2** | 1,550 M | N/A | ~10 GB | 2.9 GiB | ~3.9 GB | 1x | ~2.7% | ~4% |
+| **large-v3** | 1,550 M | N/A | ~10 GB | 2.9 GiB | ~3.9 GB | 1x | ~2.4% | ~3.5% |
+| **turbo** | 809 M | N/A | ~6 GB | 1.6 GiB | ~2.3 GB | ~8x | ~2.5% | ~3.7% |
+
 ### Understanding Error Metrics (WER & CER)
 
 #### Word Error Rate (WER)
