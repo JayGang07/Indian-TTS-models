@@ -2,15 +2,7 @@
  <h1 align="center"> Indian TTS Models — Benchmarking Standards</h1>
  <p align="center">
  <strong>Establishing benchmarking standards for Indian Language Speech Models,<br>focusing on Text-to-Speech (TTS) Synthesis</strong>
- </p>
- <p align="center">
- <a href="#models-tested">Models Tested</a> •
- <a href="#quantitative-evaluation-results">Evaluation Results</a> •
- <a href="#repository-structure">Repository Structure</a> •
- <a href="#getting-started">Getting Started</a>
- </p>
-</p>
-
+ 
 ---
 
 ## Project Overview
