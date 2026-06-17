@@ -31,7 +31,7 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 
 ## Models Tested
 
-We evaluated **7 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **6 TTS models** spanning open-source research models, community models, and commercial API services:
 
 | # | Model | Source | Architecture Type | Voice Cloning |
 |:-:|-------|--------|-------------------|:-------------:|
@@ -40,8 +40,7 @@ We evaluated **7 TTS models** spanning open-source research models, community mo
 | 3 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | VITS (Adversarial learning) | |
 | 4 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Encoder-Decoder Transformer | |
 | 5 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | StyleTTS-based | |
-| 6 | **TTSMaker** | [TTSMaker](https://ttsmaker.com/) | Commercial API | |
-| 7 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Transformer-based Text-to-Audio | |
+| 6 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Transformer-based Text-to-Audio | |
 
 ---
 
