@@ -44,11 +44,11 @@ The models we evaluated were trained and tested against a variety of large-scale
 
 | Dataset | Hours | Languages | Speakers / Accents |
 |---------|-------|-----------|--------------------|
-| **Rasa** | 400 | 13 | 20 |
-| **IndicVoices** | 7,200 | 22 | 16,237 |
-| **GLOBE** | 535 | English | 164 global accents |
-| **IndicVoices_r** | 1,700 | 22 | 10,496 |
-| **IndicTTS** | 40 (20 Native, 20 English) | 13 | - |
+| **[Rasa](https://huggingface.co/datasets/ai4bharat/Rasa)** | 400 | 13 | 20 |
+| **[IndicVoices](https://huggingface.co/datasets/ai4bharat/indicvoices)** | 7,200 | 22 | 16,237 |
+| **[GLOBE](https://huggingface.co/datasets/collabora/globe)** | 535 | English | 164 global accents |
+| **[IndicVoices_r](https://huggingface.co/datasets/ai4bharat/indicvoices_r)** | 1,700 | 22 | 10,496 |
+| **[SPICOR](https://spiredatasets.ee.iisc.ac.in/)** | 154 | Indian English, Gujarati | 4 |
 
 ---
 
