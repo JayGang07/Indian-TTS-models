@@ -46,6 +46,20 @@ We evaluated **8 TTS models** spanning open-source research models, community mo
 
 ---
 
+## Training & Evaluation Datasets
+
+The models we evaluated were trained and tested against a variety of large-scale, high-quality speech datasets:
+
+| Dataset | Hours | Languages | Speakers / Accents |
+|---------|-------|-----------|--------------------|
+| **Rasa** | 400 | 13 | 20 |
+| **IndicVoices** | 7,200 | 22 | 16,237 |
+| **GLOBE** | 535 | English | 164 global accents |
+| **IndicVoices_r** | 1,700 | 22 | 10,496 |
+| **IndicTTS** | 40 (20 Native, 20 English) | 13 | - |
+
+---
+
 ## Phonetically Balanced Dataset Breakdown
 
 ### What is a Phonetically Balanced Dataset?
@@ -123,6 +137,23 @@ If you group the mid-frequency numbers, you can see the articulatory balancing a
 - Dentals/Alveolars: 'त' (57), 'द' (34), 'न' (51)
 - Labials/Lips: 'प' (27), 'ब' (19), 'म' (47)
 - Retroflexes (Curled Tongue): 'ट' (21), 'ड' (7), 'ड़' (12)
+
+---
+
+## Evaluation Metrics
+
+To thoroughly compare these models, we relied on a combination of human-centric and automated evaluation metrics:
+
+### Subjective Metrics (Human Evaluation)
+- **MOS (Mean Opinion Score):** Rates the overall naturalness and quality of the generated speech on a 1-5 scale.
+- **Comparative MOS (CMOS):** Directly compares two audio samples side-by-side to determine which sounds better.
+- **ABX Testing:** A listener is presented with two samples (A and B) and must identify which one matches a reference sample (X) most closely, heavily used for testing voice cloning fidelity.
+
+### Objective Metrics (Automated Evaluation)
+- **WER (Word Error Rate):** Measures how many words were transcribed incorrectly.
+- **CER (Character Error Rate):** Measures character-level spelling and phonetic mistakes.
+- **STOI (Short-Time Objective Intelligibility):** Computes the intelligibility of synthesized speech based on acoustic features.
+- **PESQ (Perceptual Evaluation of Speech Quality):** An objective method for predicting subjective quality scores of speech.
 
 ---
 
