@@ -310,7 +310,7 @@ Indian-TTS-models/
 │
 ├── models/                            # The Core Model Workspaces
 │   ├── indic-parler/
-│   │   ├── notebooks/                 # indic_parler_tts.ipynb
+│   │   ├── notebooks/                 # indic_parler_tts.ipynb, indic_parler_phonetic_eval.ipynb
 │   │   ├── samples/                   # Male & female Hindi audio samples
 │   │   └── phonetic_evaluation/       # Whisper ASR evaluation CSV + audio ZIP
 │   │
@@ -321,11 +321,12 @@ Indian-TTS-models/
 │   │   └── assets/                    # Visual dashboards (PNG)
 │   │
 │   ├── meta-mms/
-│   │   ├── notebooks/                 # Meta_MMS.ipynb
+│   │   ├── notebooks/                 # Meta_MMS.ipynb, mms_phonetic_eval.ipynb
 │   │   ├── samples/                   # Hindi audio sample
 │   │   └── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
 │   │
 │   ├── suno-bark/
+│   │   ├── notebooks/                 # suno_bark_phonetic_eval.ipynb
 │   │   ├── samples/                   # Male & female Hindi audio samples
 │   │   └── phonetic_evaluation/       # Whisper ASR evaluation CSV + audio ZIP
 │   │
@@ -333,13 +334,13 @@ Indian-TTS-models/
 │   │   └── samples/                   # Male & female Hindi audio samples (MP3)
 │   │
 │   ├── vits-rasa/
-│   │   ├── notebooks/                 # vits_rasa_13.ipynb
+│   │   ├── notebooks/                 # vits_rasa_13.ipynb, vits_rasa_phonetic_eval.ipynb
 │   │   ├── samples/                   # Male & female Hindi audio samples
 │   │   └── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
 │   │
 │   └── voice_cloning/                 # Voice Cloning Models
 │       ├── xtts-v2/
-│       │   ├── notebooks/             # xtts.ipynb, xtts_v2.ipynb
+│       │   ├── notebooks/             # xtts.ipynb, xtts_v2.ipynb, xtts_phonetic_eval.ipynb
 │       │   ├── samples/               # Hindi audio samples
 │       │   └── phonetic_evaluation/   # Whisper ASR evaluation CSV + audio ZIP
 │       │
