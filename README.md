@@ -43,7 +43,7 @@ We evaluated **8 TTS models** spanning open-source research models, community mo
 
 ## Datasets available for cloning 
 
-The models we considered for voice cloning models:
+The datasets we considered for voice cloning models:
 
 | Dataset | Hours | Languages | Speakers / Accents |
 |---------|-------|-----------|--------------------|
