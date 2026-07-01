@@ -264,6 +264,38 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 ---
 
+## Voice Cloning Evaluation
+
+To evaluate the fidelity of models capable of voice cloning, we measured the acoustic similarities between the generated audio and the original speaker's ground truth audio.
+
+### XTTS v2 Analysis
+
+**Acoustic Similarity Metrics (Average across samples):**
+
+| Gender | Log-F0 RMSE | Cosine Similarity | MCD (Mel Cepstral Distortion) |
+|--------|-------------|-------------------|-------------------------------|
+| Female | 0.113919 | 0.834254 | 491.347558 |
+| Male | 0.122632 | 0.763854 | 532.432669 |
+
+**Spectral Analysis Comparison:**
+*Visual comparison of the audio spectrogram and pitch contours using WaveSurfer.*
+
+| Ground Truth Spectrogram | Generated Voice Spectrogram |
+|:---:|:---:|
+| ![Ground Truth](models/voice_cloning/xtts-v2/assets/ground_truth_spectrogram.png) | ![Generated Voice](models/voice_cloning/xtts-v2/assets/generated_spectrogram.png) |
+
+**Voice Demos:**
+
+*Sample 1: Ground Truth vs Generated*<br>
+<video src="models/voice_cloning/xtts-v2/assets/ground_truth_1.wav" controls></video>
+<video src="models/voice_cloning/xtts-v2/assets/generated_1.wav" controls></video>
+
+*Sample 2: Ground Truth vs Generated*<br>
+<video src="models/voice_cloning/xtts-v2/assets/ground_truth_2.wav" controls></video>
+<video src="models/voice_cloning/xtts-v2/assets/generated_2.wav" controls></video>
+
+---
+
 ## Evaluation Pipeline Architecture
 
 ```mermaid
