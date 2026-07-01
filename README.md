@@ -287,12 +287,12 @@ To evaluate the fidelity of models capable of voice cloning, we measured the aco
 **Voice Demos:**
 
 *Sample 1: Ground Truth vs Generated*<br>
-<video src="models/voice_cloning/xtts-v2/assets/ground_truth_1.wav" controls></video>
-<video src="models/voice_cloning/xtts-v2/assets/generated_1.wav" controls></video>
+<video src="https://raw.githubusercontent.com/JayGang07/Indian-TTS-models/main/models/voice_cloning/xtts-v2/assets/ground_truth_1.wav" controls></video>
+<video src="https://raw.githubusercontent.com/JayGang07/Indian-TTS-models/main/models/voice_cloning/xtts-v2/assets/generated_1.wav" controls></video>
 
 *Sample 2: Ground Truth vs Generated*<br>
-<video src="models/voice_cloning/xtts-v2/assets/ground_truth_2.wav" controls></video>
-<video src="models/voice_cloning/xtts-v2/assets/generated_2.wav" controls></video>
+<video src="https://raw.githubusercontent.com/JayGang07/Indian-TTS-models/main/models/voice_cloning/xtts-v2/assets/ground_truth_2.wav" controls></video>
+<video src="https://raw.githubusercontent.com/JayGang07/Indian-TTS-models/main/models/voice_cloning/xtts-v2/assets/generated_2.wav" controls></video>
 
 ---
 
