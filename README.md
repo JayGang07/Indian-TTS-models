@@ -245,8 +245,8 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 3 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
 | 4 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
 | 5 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
-| 6 | **Indic F5** | - | - | 2.50 |
-| 7 | **Indic Parler-TTS** | - | - | 1.00 |
+| 6 | **Indic F5** | 0.1845 | 0.0717 | 2.50 |
+| 7 | **Indic Parler-TTS** | 0.6581 | 0.5406 | 1.00 |
 
 ### Model Leaderboard (Assamese Phonetics)
 
