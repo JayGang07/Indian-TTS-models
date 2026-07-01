@@ -284,15 +284,23 @@ To evaluate the fidelity of models capable of voice cloning, we measured the aco
 |:---:|:---:|
 | ![Ground Truth](models/voice_cloning/xtts-v2/assets/ground_truth_spectrogram.png) | ![Generated Voice](models/voice_cloning/xtts-v2/assets/generated_spectrogram.png) |
 
-**Voice Demos (click to listen):**
+**Voice Demos:**
 
-| Sample | Ground Truth | XTTS v2 Generated |
-|--------|:------------:|:-----------------:|
-| Sample 1 (Female) | [Ground Truth 1](models/voice_cloning/xtts-v2/assets/ground_truth_1.wav) | [Generated 1](models/voice_cloning/xtts-v2/assets/generated_1.wav) |
-| Sample 2 (Male) | [Ground Truth 2](models/voice_cloning/xtts-v2/assets/ground_truth_2.wav) | [Generated 2](models/voice_cloning/xtts-v2/assets/generated_2.wav) |
+*Sample 1 (Female) - Ground Truth:*
 
-> [!TIP]
-> Click any link above to download and listen to the audio sample. GitHub does not support inline audio playback in Markdown.
+https://github.com/JayGang07/Indian-TTS-models/raw/main/models/voice_cloning/xtts-v2/assets/ground_truth_1.mp4
+
+*Sample 1 (Female) - XTTS v2 Generated:*
+
+https://github.com/JayGang07/Indian-TTS-models/raw/main/models/voice_cloning/xtts-v2/assets/generated_1.mp4
+
+*Sample 2 (Male) - Ground Truth:*
+
+https://github.com/JayGang07/Indian-TTS-models/raw/main/models/voice_cloning/xtts-v2/assets/ground_truth_2.mp4
+
+*Sample 2 (Male) - XTTS v2 Generated:*
+
+https://github.com/JayGang07/Indian-TTS-models/raw/main/models/voice_cloning/xtts-v2/assets/generated_2.mp4
 
 ---
 
