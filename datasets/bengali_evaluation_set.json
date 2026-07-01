@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "bengali_sentence": "অন্ধকার ঘরে কাঁপা হাতে সে পুরোনো পুঁথি আর রথের ভাঙা চাকা খুঁজছে।",
+    "phonetic_targets": "Missing Nasals & Terminal Aspirates: /ĩ/ (ইঁ), /ũ/ (উঁ), and word-ending /kʰ/ (নখ), /t̪ʰ/ (রথ), /bʰ/ (লাভ).",
+    "benchmark_category": "Intelligibility (SUS): Pure articulation test using nonsensical logic."
+  },
+  {
+    "id": 2,
+    "bengali_sentence": "ফাল্গুনের মেলায় ভণ্ড সাধুর কথায় ঘণ্টা বাজতেই এক অদ্ভুত কম্পন তৈরি হলো।",
+    "phonetic_targets": "Missing Conjuncts: /lg/ (ল্গ), /nɖ/ (ন্ড), /nʈ/ (ন্ট), and /mp/ (ম্প).",
+    "benchmark_category": "Intelligibility (SUS): Evaluates dense consonant clusters without semantic context."
+  },
+  {
+    "id": 3,
+    "bengali_sentence": "শহরের এই উচ্চ অট্টালিকার ছাদে দাঁড়ালে উদ্দাম বাতাসের শব্দে অন্য সত্তার খোঁজ মেলে।",
+    "phonetic_targets": "Gemination (Dwitwa): Doubled consonants /cc/ (চ্চ), /ʈʈ/ (ট্ট), /dd/ (দ্দ), /t̪t̪/ (ত্ত).",
+    "benchmark_category": "Intelligibility (SUS): Tests the holding duration of stop consonants."
+  },
+  {
+    "id": 4,
+    "bengali_sentence": "বর্ষার শেষে মেঘলা আকাশে হঠাৎ এক ঝাঁক সাদা বক আর সবুজ ঘাসের ওপর ব্যাঙের ডাক শোনা গেল।",
+    "phonetic_targets": "Velars & Fricatives: /k/, /kʰ/, /g/, /gʰ/, /ŋ/ (ঙ/ং), and /ʃ/ vs /s/ flows.",
+    "benchmark_category": "Prosody & Phrasing: Tests interrogative pitch rise, em-dash pause, and commas."
+  },
+  {
+    "id": 5,
+    "bengali_sentence": "সে রেগে গিয়ে বলল, \"আমার ছাতা আর ফলের ঝুড়িটা কোথায় জেনেশুনে লুকিয়ে রেখেছ?\"",
+    "phonetic_targets": "Palatals & Affricates: /c/ (চ), /cʰ/ (ছ), /dʒ/ (জ), /dʒʰ/ (ঝ).",
+    "benchmark_category": "Naturalness: Quoted speech boundaries and boundary tone shifts."
+  },
+  {
+    "id": 6,
+    "bengali_sentence": "জুম মিটিং চলার সময় ল্যাপটপের ব্রাইটনেস কমিয়ে পিডিএফ ফাইলটা আমাকে ফরোয়ার্ড করো।",
+    "phonetic_targets": "Loan Fricatives: /z/ (জ়), /f/ (ফ), and English vowel /æ/ (ল্যা).",
+    "benchmark_category": "Robustness (Code-Mixing): Heavy tech vocabulary embedded in Bengali syntax."
+  },
+  {
+    "id": 7,
+    "bengali_sentence": "ট্রেনের ড্রাইভার ব্লুটুথ হেডফোন কানে দিয়ে স্ক্রিনের দিকে তাকিয়ে ইমার্জেন্সি ব্রেক কষলেন।",
+    "phonetic_targets": "English Clusters: /ʈr/ (ট্র), /ɖr/ (ড্র), /bl/ (ব্লু), /skr/ (স্ক্রি), /br/ (ব্রে).",
+    "benchmark_category": "Robustness (Code-Mixing): Pronunciation of foreign phonotactics."
+  },
+  {
+    "id": 8,
+    "bengali_sentence": "২০০৫ সালের ১৫ই আগস্ট, কলকাতার তাপমাত্রা ছিল ঠিক ৪২.৫ ডিগ্রি সেলসিয়াস।",
+    "phonetic_targets": "Dentals & Sibilants: /t̪/, /t̪ʰ/, /d̪/, /d̪ʰ/ and high frequency /s/.",
+    "benchmark_category": "Text Normalization: Years, ordinal suffixes (১৫ই), and decimal points (৪২.৫)."
+  },
+  {
+    "id": 9,
+    "bengali_sentence": "পৌনে তিনটের সময় আড়াই কিলো চাল আর দেড় লিটার দুধ কিনে সে রাস্তার ধারে দাঁড়াল।",
+    "phonetic_targets": "Retroflexes: /ʈ/ (ট), /ʈʰ/ (ঠ), /ɖ/ (ড), /ɖʰ/ (ঢ), and /ɽ/ (ড়).",
+    "benchmark_category": "Text Normalization: Fractional vocabulary (পৌনে, আড়াই, দেড়) vs. standard digits."
+  },
+  {
+    "id": 10,
+    "bengali_sentence": "বড্ড বেশি বকছ! এক্ষুনি চুপ করে নিজের কাজটা শেষ করো, নইলে এর ফল খুব খারাপ হবে!",
+    "phonetic_targets": "Explosive Stops: /ɖɖ/ (ড্ড), /kkh/ (ক্ষ), /p/ (প).",
+    "benchmark_category": "Expressiveness (Anger): High energy, harsh consonant attacks, exclamation bursts."
+  },
+  {
+    "id": 11,
+    "bengali_sentence": "নদীর ঢেউয়ের শব্দে তার বিষণ্ণ মনটা আজ যেন আরও গহিন শূন্যতায় ধীরে ধীরে ডুবে গেল।",
+    "phonetic_targets": "Long Vowels & Diphones: /eu̯/ (ঢেউ), /ɳ/ vs /n/ (ণ/ন).",
+    "benchmark_category": "Expressiveness (Sadness): Lower pitch, slower speaking rate, soft trailing off."
+  },
+  {
+    "id": 12,
+    "bengali_sentence": "কী অপূর্ব দৃশ্য! ঐশ্বর্যশালী অতিথিদের উপস্থিতিতে উৎসবের প্রাঙ্গণ আজ আনন্দে মুখরিত হয়ে উঠেছে!",
+    "phonetic_targets": "Complex Conjuncts: /gj/ (জ্ঞ), /sp/ (স্প), /pr/ (প্র), /ŋg/ (ঙ্গ), /oi/ (ঐ).",
+    "benchmark_category": "Expressiveness (Joy): Rapid pitch escalation, wide vocal range."
+  },
+  {
+    "id": 13,
+    "bengali_sentence": "আষাঢ়ের মেঘে ঢাকা এই গাঢ় অন্ধকারে বসে মিঞা ভাই আপন মনে গান গাইছেন।",
+    "phonetic_targets": "Rare Consonants: Aspirated flap /ɽʰ/ (ঢ়), Retroflex Sibilant /ʃ/ (ষ), Palatal Nasal /ɲ/ (ঞ).",
+    "benchmark_category": "Acoustic Edge Case: Tests the difference between ড় and ঢ় in continuous flow."
+  },
+  {
+    "id": 14,
+    "bengali_sentence": "বাঁশবাগানের মাথার ওপর দিয়ে ভোঁতা একটা আওয়াজ করে, ক্যাঁকচেঁক শব্দে একটা প্যাঁচা ডেকে উঠল।",
+    "phonetic_targets": "Heavy Nasalization: /ã/ (বাঁ), /õ/ (ভোঁ), /æ̃/ (ক্যাঁ/প্যাঁ).",
+    "benchmark_category": "Acoustic Edge Case: Simultaneous nasalization and aspiration."
+  },
+  {
+    "id": 15,
+    "bengali_sentence": "স্নান করে ভাত খেয়ে সে বিছানায় শুয়ে পড়ল, আর দেখতে দেখতে গভীর ঘুমে আচ্ছন্ন হয়ে গেল।",
+    "phonetic_targets": "Triphthongs / Complex Glides: /iei/ (খেয়েই, শুয়েই).",
+    "benchmark_category": "Vowel Flow: Tests complex multi-vowel gliding without phonetic breakage."
+  },
+  {
+    "id": 16,
+    "bengali_sentence": "তার মতো প্রজ্ঞা ও তীক্ষ্ণ বুদ্ধির বাঞ্ছা অনেকেই করেন, তাই তাকে গুরু হিসেবে মান্য করা হয়।",
+    "phonetic_targets": "Formal Registers: /kkhn/ (ক্ষ্ণ), /ɲcʰ/ (ঞ্ছ), /gj/ (জ্ঞ).",
+    "benchmark_category": "Phonotactics: Tests highly formal Sanskrit-derived clusters (তৎসম শব্দ)."
+  },
+  {
+    "id": 17,
+    "bengali_sentence": "ছোট্ট ছেলেটি ছাদের ধারে দাঁড়িয়ে নিজের হাতে জবা ফুলের তোড়া বানাল।",
+    "phonetic_targets": "Schwa Deletion targets: Whether \"ফুলের\" drops the last 'o' sound.",
+    "benchmark_category": "Rhythm / Schwa: Tests whether inherent vowels are dropped correctly at syllable boundaries."
+  },
+  {
+    "id": 18,
+    "bengali_sentence": "ব্যাঙ্কের ম্যানেজার গ্যারাজে গিয়ে ট্যাক্সি ভাড়া করে এয়ারপোর্টের দিকে রওনা দিলেন।",
+    "phonetic_targets": "y-fala (য-ফলা): Extensive /æ/ mapping (ব্যা, ম্যা, গ্যা, ট্যা).",
+    "benchmark_category": "Phonotactics: Ensures the model doesn't confuse /æ/ (অ্যা) with /a/ (আ) in English loan words."
+  },
+  {
+    "id": 19,
+    "bengali_sentence": "হঠাৎ উৎসবের দিনে নদীর জল এতটাই বেড়ে গেল যে গ্রামের সবাই খুব ভয় পেয়ে গেল।",
+    "phonetic_targets": "Terminal Stops: /t/ (হঠাৎ), /l/ (জল, পেল).",
+    "benchmark_category": "Rhythm / Schwa: Tests terminal codas and whether the model wrongly adds an 'o' to 'জল' (jol vs jolo)."
+  },
+  {
+    "id": 20,
+    "bengali_sentence": "নৌকো করে নদীর থৈথৈ জলে ভাসার সময়, উনুনের মিষ্টি ধোঁয়ায় তার চোখ বুজে এল।",
+    "phonetic_targets": "Diphthongs: /ou/ (নৌ), /oi/ (থৈ).",
+    "benchmark_category": "Vowel Flow: Tests the model's transition between the standard Bengali diphthongs."
+  }
+]

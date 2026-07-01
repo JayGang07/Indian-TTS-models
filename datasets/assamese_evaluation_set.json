@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "assamese_sentence": "আন্ধাৰ কোঠাত কঁপা হাতেৰে তেওঁ পুৰণি পুথি আৰু ৰথৰ ভঙা চকা বিচাৰিছে।",
+    "phonetic_targets": "Missing Nasals & Terminal Aspirates: /kɔ̃/ (কঁ), terminal /tʰ/ (ৰথ), and /pʰ/ (পুথি).",
+    "benchmark_category": "Intelligibility (SUS): Pure articulation test focusing on aspiration and nasalization."
+  },
+  {
+    "id": 2,
+    "assamese_sentence": "ফাগুনৰ মেলাত ভণ্ড সাধুৰ কথাত ঘণ্টা বাজি উঠোঁতেই এক অদ্ভুত কম্পনৰ সৃষ্টি হ'ল।",
+    "phonetic_targets": "Missing Conjuncts: /nɖ/ (ণ্ড), /nʈ/ (ণ্ট), /mp/ (ম্প), and /dbʱ/ (দ্ভূ).",
+    "benchmark_category": "Intelligibility (SUS): Evaluates dense consonant clusters within a meaningful context."
+  },
+  {
+    "id": 3,
+    "assamese_sentence": "চহৰৰ এই ওখ অট্টালিকাৰ ছাদত থিয় দিলে উদ্দাম বতাহৰ শব্দত অন্য এক সত্তাৰ সন্ধান পোৱা যায়।",
+    "phonetic_targets": "Gemination (Dwitwa): Doubled consonants /ʈʈ/ (ট্ট), /dd/ (দ্দ), /bd/ (ব্দ), /t̪t̪/ (ত্ত).",
+    "benchmark_category": "Intelligibility (SUS): Tests the holding duration of stop consonants."
+  },
+  {
+    "id": 4,
+    "assamese_sentence": "বৰষুণৰ শেষত সেউজীয়া ঘাঁহৰ ওপৰত হঠাৎ এজাক বগা বগলী আৰু ভেকুলীৰ মাত শুনিবলৈ পোৱা গ'ল।",
+    "phonetic_targets": "Velar Fricatives & Glottals: /x/ (স, শ, ষ) and /h/ (হ, ঘাঁহ) specific to Assamese phonology.",
+    "benchmark_category": "Prosody & Phrasing: Tests natural vowel elongation and fricative airflow."
+  },
+  {
+    "id": 5,
+    "assamese_sentence": "তেওঁ খঙেৰে ক'লে, \"মোৰ ছাতি আৰু ফলৰ খৰাহিটো বাৰু ক'ত জানি-শুনি লুকুৱাই থৈছা?\"",
+    "phonetic_targets": "Alveolar Fricatives: /s/ for চ and ছ, /z/ for জ, and the unique Assamese phonology shift.",
+    "benchmark_category": "Naturalness: Quoted speech boundaries, boundary tone shifts, and interrogative pitch."
+  },
+  {
+    "id": 6,
+    "assamese_sentence": "জুম মিটিং চলি থকাৰ সময়ত লেপটপৰ ব্ৰাইটনেছ কমাই পিডিএফ ফাইলটো মোক ফৰৱাৰ্ড কৰা।",
+    "phonetic_targets": "Loan Fricatives: English /z/ (জুম), /f/ (ফাইল, ফৰৱাৰ্ড), and vowel /æ/ (লেপ).",
+    "benchmark_category": "Robustness (Code-Mixing): Heavy tech vocabulary embedded in Assamese syntax."
+  },
+  {
+    "id": 7,
+    "assamese_sentence": "ট্ৰেইনৰ ড্ৰাইভাৰে ব্লুটুথ হেডফোন কাণত দি স্ক্ৰীণৰ ফালে চাই ইমাৰ্জেন্সি ব্ৰেক মাৰিলে।",
+    "phonetic_targets": "English Clusters: /ʈr/ (ট্ৰে), /ɖr/ (ড্ৰা), /bl/ (ব্লু), /skr/ (স্ক্ৰী), /br/ (ব্ৰে).",
+    "benchmark_category": "Robustness (Code-Mixing): Pronunciation of foreign phonotactics without unnatural breaks."
+  },
+  {
+    "id": 8,
+    "assamese_sentence": "২০০৫ চনৰ ১৫ আগষ্টত গুৱাহাটীৰ তাপমাত্ৰা আছিল ঠিক ৪২.৫ ডিগ্ৰী চেলছিয়াছ।",
+    "phonetic_targets": "Alveolar Stops & Sibilants: /t/, /d/, and high frequency /s/.",
+    "benchmark_category": "Text Normalization: Years (২০০৫), dates (১৫), and decimal points (৪২.৫)."
+  },
+  {
+    "id": 9,
+    "assamese_sentence": "পৌনে তিনিটাত আঢ়ৈ কিল'গ্ৰাম চাউল আৰু ডেৰ লিটাৰ গাখীৰ কিনি তেওঁ ৰাস্তাৰ দাঁতিত ৰৈ আছিল।",
+    "phonetic_targets": "Alveolar & Rhotic targets: Fraction terms and Assamese specific /ɹ/ pronunciation of ড়/ঢ়.",
+    "benchmark_category": "Text Normalization: Fractional vocabulary (পৌনে, আঢ়ৈ, ডেৰ) vs. standard digits."
+  },
+  {
+    "id": 10,
+    "assamese_sentence": "বৰ বেছি বকিছা! এতিয়াই মনে মনে থাকি নিজৰ কামটো শেষ কৰা, নহ'লে ইয়াৰ ফল বৰ বেয়া হ'ব!",
+    "phonetic_targets": "Explosive Stops: /b/ (ব), /k/ (ক), /p/ (প).",
+    "benchmark_category": "Expressiveness (Anger): High energy, harsh consonant attacks, exclamation bursts."
+  },
+  {
+    "id": 11,
+    "assamese_sentence": "নদীৰ ঢৌৰ শব্দত তেওঁৰ বিষণ্ণ মনটো আজি যেন গভীৰ শূন্যতাত লাহে লাহে ডুব গ'ল।",
+    "phonetic_targets": "Long Vowels & Diphones: /ɔu/ (ঢৌ), /u/ (ডুব), and soft trailing consonants.",
+    "benchmark_category": "Expressiveness (Sadness): Lower pitch, slower speaking rate, soft trailing off."
+  },
+  {
+    "id": 12,
+    "assamese_sentence": "কি অপূৰ্ব দৃশ্য! ঐশ্বৰ্যশালী অতিথিসকলৰ উপস্থিতিত উৎসৱৰ প্ৰাংগণ আজি আনন্দত মুখৰিত হৈ পৰিছে!",
+    "phonetic_targets": "Complex Conjuncts: /pɹ/ (প্ৰ), /ŋg/ (ঙ্গ), /stʰ/ (স্থ), /ɔi/ (ঐ).",
+    "benchmark_category": "Expressiveness (Joy): Rapid pitch escalation, wide vocal range."
+  },
+  {
+    "id": 13,
+    "assamese_sentence": "আষাঢ়ৰ মেঘে ঢকা এই গাঢ় অন্ধকাৰত বহি মিঞা ভাইটিয়ে আপোন মনে গান গাইছে।",
+    "phonetic_targets": "Rare Consonants & Rhotics: /ɹ/ for ড়/ঢ় in continuous flow, palatal nasal /ɲ/ (ঞ).",
+    "benchmark_category": "Acoustic Edge Case: Tests the distinct pronunciation rules of rare characters in Assamese."
+  },
+  {
+    "id": 14,
+    "assamese_sentence": "বাঁহনিডৰাৰ ওপৰেদি ভোঁতা এক আৱাজ কৰি, কেকচেক শব্দৰে এটা ফেঁচাই মাতি উঠিল।",
+    "phonetic_targets": "Heavy Nasalization: /ã/ (বাঁহ), /õ/ (ভোঁ), /ẽ/ (ফেঁ).",
+    "benchmark_category": "Acoustic Edge Case: Simultaneous nasalization, velar fricatives /x/, and glottals."
+  },
+  {
+    "id": 15,
+    "assamese_sentence": "স্নান কৰি ভাত খাইয়েই তেওঁ বিচনাত শুই পৰিল, আৰু চাওঁতে চাওঁতে গভীৰ টোপনিত লালকাল দিলে।",
+    "phonetic_targets": "Triphthongs / Complex Glides: /aij/ (খাইয়েই), /aõt/ (চাওঁতে).",
+    "benchmark_category": "Vowel Flow: Tests complex multi-vowel gliding without phonetic breakage."
+  },
+  {
+    "id": 16,
+    "assamese_sentence": "তেওঁৰ দৰে প্ৰজ্ঞা আৰু তীক্ষ্ণ বুদ্ধিৰ বাঞ্ছা বহুতেই কৰে, সেয়ে তেওঁক গুৰু হিচাপে মান্য কৰা হয়।",
+    "phonetic_targets": "Formal Registers: /kkhn/ or /kky/ (ক্ষ্ণ), /ɲs/ (ঞ্ছ), /gj/ or /ggw/ (জ্ঞ).",
+    "benchmark_category": "Phonotactics: Tests highly formal Sanskrit-derived clusters (তৎসম শব্দ) in Assamese."
+  },
+  {
+    "id": 17,
+    "assamese_sentence": "সৰু ল'ৰাটোৱে ছাদৰ দাঁতিত থিয় হৈ নিজৰ হাতেৰে জবা ফুলৰ থোপা বনাব ধৰিলে।",
+    "phonetic_targets": "Schwa Deletion & Retention: Whether terminal 'a' is preserved or dropped (e.g., জবা vs ফুলৰ).",
+    "benchmark_category": "Rhythm / Schwa: Tests natural syllable boundaries and Assamese stress timing."
+  },
+  {
+    "id": 18,
+    "assamese_sentence": "বেংকৰ মেনেজাৰজন গেৰেজলৈ গৈ টেক্সি এখন ভাড়া কৰি এয়াৰপ'ৰ্টৰ ফালে ৰাওনা হ'ল।",
+    "phonetic_targets": "Vowel mapping: Extensive /ɛ/ mapping and Assamese transliteration of loan words.",
+    "benchmark_category": "Phonotactics: Ensures the model processes English phonetic adaptations natively."
+  },
+  {
+    "id": 19,
+    "assamese_sentence": "হঠাৎ উৎসৱৰ দিনা নদীৰ পানী ইমানেই বাঢ়ি গ'ল যে গাঁৱৰ সকলোৱে বৰ ভয় খালে।",
+    "phonetic_targets": "Terminal Stops: /t/ (হঠাৎ) and word final phonemes /l/ (গ'ল).",
+    "benchmark_category": "Rhythm / Schwa: Tests terminal codas and prevents improper vowel insertions."
+  },
+  {
+    "id": 20,
+    "assamese_sentence": "নাৱত উঠি নদীৰ থৈ-থৈ পানীত ভাঁহি ফুৰোঁতে, চৌকাৰ মিঠা ধোঁৱাত তেওঁৰ চকু মুদ খাই আহিল।",
+    "phonetic_targets": "Diphthongs & Semi-vowels: /w/ (ৱ), /ɔu/ (চৌ), /ɔi/ (থৈ).",
+    "benchmark_category": "Vowel Flow: Tests the transition between diphthongs and the Assamese /w/ semi-vowel."
+  }
+]

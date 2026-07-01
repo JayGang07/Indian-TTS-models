@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-This project benchmarks open-source and API-based **Text-to-Speech (TTS)** models for **Indian languages**, with an initial focus on **Hindi**. The goal is to establish a standardized evaluation framework for comparing Indian language speech synthesis models across key quality dimensions — naturalness, intelligibility, prosody, and voice cloning fidelity.
+This project benchmarks open-source and API-based **Text-to-Speech (TTS)** models for **Indian languages**, with evaluation across **Hindi, Bengali, and Assamese**. The goal is to establish a standardized evaluation framework for comparing Indian language speech synthesis models across key quality dimensions — naturalness, intelligibility, prosody, and voice cloning fidelity.
 
 This work is carried out as part of an internship at **[Kaliber.AI](https://kaliber.ai) / Bay Area Advanced Analytics**.
 
@@ -26,18 +26,19 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 > [!NOTE]
 > For a comprehensive overview, including detailed features and comparisons, view the **[Indian TTS Models Overview Spreadsheet](https://docs.google.com/spreadsheets/d/1lPsC1ouOFhUqIAKhp-tiZ-qPhk6zHms_j6_Iq5txx0g/edit?gid=37611081#gid=37611081)**.
 
-We evaluated **8 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **9 TTS models** spanning open-source research models, community models, and commercial API services:
 
-| # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning |
-|:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|
-| 1 | **XTTS v2** | [Coqui TTS](https://github.com/coqui-ai/TTS) | Auto-regressive Transformer | 2023 | 518M | Yes |
-| 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | VITS-based | 2023 | 300M | No |
-| 3 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Transformer-based Text-to-Audio | 2023 | 550M | No |
-| 4 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | VITS (Adversarial learning) | 2024 | 40.2M | No |
-| 5 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Encoder-Decoder Transformer | 2024 | 938M | No |
-| 6 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | StyleTTS-based | 2024 | 82M | No |
-| 7 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes |
-| 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes |
+| # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning | Bengali / Assamese |
+|:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|:------------------:|
+| 1 | **XTTS v2** | [Coqui TTS](https://github.com/coqui-ai/TTS) | Auto-regressive Transformer | 2023 | 518M | Yes | — |
+| 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | VITS-based | 2023 | 300M | No | ✅ / ✅ |
+| 3 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Transformer-based Text-to-Audio | 2023 | 550M | No | — |
+| 4 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | VITS (Adversarial learning) | 2024 | 40.2M | No | ✅ / ✅ |
+| 5 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Encoder-Decoder Transformer | 2024 | 938M | No | ✅ / ✅ |
+| 6 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | StyleTTS-based | 2024 | 82M | No | — |
+| 7 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes | — |
+| 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | — |
+| 9 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | ✅ / ✅ |
 
 ---
 
@@ -62,7 +63,12 @@ A **phonetically balanced dataset** is a collection of text or audio data that c
 
 **Example:** Instead of a simple sentence like "Hello, my name is Jay," a phonetically dense Hindi sentence might be deliberately written to include loan words, nasal sounds, and aspirated consonants (e.g., "ज़ुबैर ने फ़र्ज़ निभाते हुए क़िले के पास से गुज़रते हुए एक ख़त पढ़ा।") to force the model to render rare phonemes like 'ज़', 'फ़', 'क़', and 'ख़'.
 
-To rigorously test the intelligibility and pronunciation of each model, we generated a **Custom Phonetically Balanced Hindi Dataset** (`datasets/hindi_evaluation_set.json`). This dataset targets challenging Indian language phonemes, including Velars, Gutturals, Retroflexes, Palatals, and Nasals.
+To rigorously test the intelligibility and pronunciation of each model, we generated **Custom Phonetically Balanced Datasets** for three languages:
+- **Hindi** — `datasets/hindi_evaluation_set.json`
+- **Bengali** — `datasets/bengali_evaluation_set.json`
+- **Assamese** — `datasets/assamese_evaluation_set.json`
+
+Each dataset targets challenging phonemes specific to that language, including Velars, Gutturals, Retroflexes, Palatals, Nasals, and language-specific edge cases.
 
 ### Hindi Phoneme Frequencies
 - Phoneme अ (Schwa): 250
@@ -132,6 +138,52 @@ If you group the mid-frequency numbers, you can see the articulatory balancing a
 - Dentals/Alveolars: 'त' (57), 'द' (34), 'न' (51)
 - Labials/Lips: 'प' (27), 'ब' (19), 'म' (47)
 - Retroflexes (Curled Tongue): 'ट' (21), 'ड' (7), 'ड़' (12)
+
+### Bengali Phonetically Balanced Dataset (`datasets/bengali_evaluation_set.json`)
+
+The Bengali evaluation set contains **20 carefully crafted sentences** targeting phonemes unique to Bengali, including:
+
+| Category | Phonetic Targets | Example Phonemes |
+|----------|-----------------|------------------|
+| **Missing Nasals & Terminal Aspirates** | /ĩ/ (ইঁ), /ũ/ (উঁ), terminal /kʰ/, /t̪ʰ/, /bʰ/ | ইঁ, উঁ, নখ, রথ |
+| **Conjuncts (যুক্তাক্ষর)** | /lg/ (ল্গ), /nɖ/ (ন্ড), /nʈ/ (ন্ট), /mp/ (ম্প) | ফাল্গুন, ভণ্ড, ঘণ্টা, কম্পন |
+| **Gemination (দ্বিত্ব)** | /cc/ (চ্চ), /ʈʈ/ (ট্ট), /dd/ (দ্দ) | উচ্চ, অট্টালিকা, উদ্দাম |
+| **Velars & Fricatives** | /k/, /kʰ/, /g/, /gʰ/, /ŋ/ and /ʃ/ vs /s/ | ক, খ, গ, ঘ, ং |
+| **Palatals & Affricates** | /c/ (চ), /cʰ/ (ছ), /dʒ/ (জ), /dʒʰ/ (ঝ) | চ, ছ, জ, ঝ |
+| **Loan Fricatives (Code-Mixing)** | /z/ (জ়), /f/ (ফ), English /æ/ (ল্যা) | জুম, ফাইল, ল্যাপটপ |
+| **English Clusters** | /ʈr/ (ট্র), /ɖr/ (ড্র), /bl/ (ব্লু), /skr/ (স্ক্রি) | ট্রেন, ড্রাইভার, ব্লুটুথ |
+| **Heavy Nasalization** | /ã/ (বাঁ), /õ/ (ভোঁ), /æ̃/ (ক্যাঁ/প্যাঁ) | বাঁশ, ভোঁতা, ক্যাঁকচেঁক |
+| **Complex Conjuncts** | /gj/ (জ্ঞ), /sp/ (স্প), /pr/ (প্র), /ŋg/ (ঙ্গ) | প্রজ্ঞা, প্রাঙ্গণ, উপস্থিতি |
+| **য-ফলা (y-fala)** | Extensive /æ/ mapping (ব্যা, ম্যা, গ্যা, ট্যা) | ব্যাঙ্ক, ম্যানেজার, গ্যারাজ |
+| **Diphthongs** | /ou/ (নৌ), /oi/ (থৈ) | নৌকো, থৈথৈ |
+
+### Assamese Phonetically Balanced Dataset (`datasets/assamese_evaluation_set.json`)
+
+The Assamese evaluation set contains **20 carefully crafted sentences** targeting the distinct phonological features of Assamese, including:
+
+| Category | Phonetic Targets | Example Phonemes |
+|----------|-----------------|------------------|
+| **Velar Fricatives & Glottals** | /x/ (স, শ, ষ) and /h/ (হ) — unique Assamese shift | শ→/x/, স→/x/, ঘাঁহ |
+| **Alveolar Fricatives** | /s/ for চ and ছ, /z/ for জ (Assamese phonology) | চ→/s/, ছ→/s/, জ→/z/ |
+| **Rhotics** | Assamese-specific /ɹ/ pronunciation of ড়/ঢ় | আষাঢ়, আঢ়ৈ |
+| **Semi-vowels** | /w/ (ৱ) — unique to Assamese script | ৱ, উৎসৱ |
+| **Gemination** | /ʈʈ/ (ট্ট), /dd/ (দ্দ), /bd/ (ব্দ) | অট্টালিকা, উদ্দাম |
+| **Heavy Nasalization** | /ã/ (বাঁ), /õ/ (ভোঁ), /ẽ/ (ফেঁ) | বাঁহ, ভোঁতা, ফেঁচা |
+| **Code-Mixing** | English loan words adapted to Assamese phonotactics | জুম, ব্ৰাইটনেছ, ফৰৱাৰ্ড |
+| **Complex Glides/Triphthongs** | /aij/ (খাইয়েই), /aõt/ (চাওঁতে) | খাইয়েই, চাওঁতে |
+| **Diphthongs** | /ɔu/ (চৌ), /ɔi/ (থৈ) | চৌকা, থৈ-থৈ |
+| **Sanskrit-derived Clusters** | /kkhn/ (ক্ষ্ণ), /ɲs/ (ঞ্ছ), /gj/ (জ্ঞ) | তীক্ষ্ণ, বাঞ্ছা, প্রজ্ঞা |
+
+### Models Tested on Bengali & Assamese
+
+Of the 9 models in our benchmark, only **4 models** natively support both Bengali and Assamese:
+
+| Model | Bengali Support | Assamese Support | Notebook (Bengali) | Notebook (Assamese) |
+|-------|:---------------:|:----------------:|--------------------:|--------------------:|
+| **VITS Rasa 13** | ✅ | ✅ | [`vits_rasa_bengali.ipynb`](models/vits-rasa/notebooks/vits_rasa_bengali.ipynb) | [`vits_rasa_assamese.ipynb`](models/vits-rasa/notebooks/vits_rasa_assamese.ipynb) |
+| **Meta MMS** | ✅ | ✅ | [`mms_bengali.ipynb`](models/meta-mms/notebooks/mms_bengali.ipynb) | [`mms_assamese.ipynb`](models/meta-mms/notebooks/mms_assamese.ipynb) |
+| **Indic Parler-TTS** | ✅ | ✅ | [`indic_parler_bengali.ipynb`](models/indic-parler/notebooks/indic_parler_bengali.ipynb) | [`indic_parler_assamese.ipynb`](models/indic-parler/notebooks/indic_parler_assamese.ipynb) |
+| **Indic F5** | ✅ | ✅ | [`indic_f5_bengali.ipynb`](models/indic-f5/notebooks/indic_f5_bengali.ipynb) | [`indic_f5_assamese.ipynb`](models/indic-f5/notebooks/indic_f5_assamese.ipynb) |
 
 ---
 
@@ -286,6 +338,12 @@ $$CER = \frac{S + D + I}{N}$$
 - **Indian Language Support:** Hindi (via multi-lingual capability).
 - **Workspace:** [`models/voice_cloning/spark-tts/`](models/voice_cloning/spark-tts/)
 
+### 9. Indic F5 (AI4Bharat)
+- **Architecture:** Flow-matching Transformer based on the F5-TTS architecture.
+- **Key Feature:** High-quality speech synthesis for Indian languages with zero-shot voice cloning using a reference audio prompt from IndicVoices-R.
+- **Indian Language Support:** Bengali, Assamese, and other Indic languages.
+- **Workspace:** [`models/indic-f5/`](models/indic-f5/)
+
 
 ## Repository Structure
 
@@ -297,18 +355,24 @@ Indian-TTS-models/
 ├── requirements.txt                   # Python dependencies
 ├── .gitignore                         # Git ignore rules
 │
-├── datasets/                          # Large testing datasets
+├── datasets/                          # Phonetically balanced evaluation datasets
 │   ├── dataset_48.5_41.5.zip
-│   └── hindi_evaluation_set.json      # Custom phonetically balanced Hindi dataset
+│   ├── hindi_evaluation_set.json      # Custom phonetically balanced Hindi dataset
+│   ├── bengali_evaluation_set.json    # Custom phonetically balanced Bengali dataset
+│   └── assamese_evaluation_set.json   # Custom phonetically balanced Assamese dataset
 │
 ├── docs/                              # Project-level documentation
 │   └── Indian_TTS_Models_Overview.xlsx
 │
 ├── models/                            # The Core Model Workspaces
+│   ├── indic-f5/                      # [NEW] Indic F5 (AI4Bharat)
+│   │   ├── notebooks/                 # indic_f5_bengali.ipynb, indic_f5_assamese.ipynb
+│   │   └── phonetic_evaluation/       # Bengali & Assamese audio ZIPs
+│   │
 │   ├── indic-parler/
-│   │   ├── notebooks/                 # indic_parler_tts.ipynb, indic_parler_phonetic_eval.ipynb
+│   │   ├── notebooks/                 # Hindi, Bengali, & Assamese evaluation notebooks
 │   │   ├── samples/                   # Male & female Hindi audio samples
-│   │   └── phonetic_evaluation/       # Whisper ASR evaluation CSV + audio ZIP
+│   │   └── phonetic_evaluation/       # Hindi, Bengali, & Assamese evaluation results
 │   │
 │   ├── kokoro/
 │   │   ├── notebooks/                 # kokoro.ipynb
@@ -317,9 +381,9 @@ Indian-TTS-models/
 │   │   └── assets/                    # Visual dashboards (PNG)
 │   │
 │   ├── meta-mms/
-│   │   ├── notebooks/                 # Meta_MMS.ipynb, mms_phonetic_eval.ipynb
+│   │   ├── notebooks/                 # Hindi, Bengali, & Assamese evaluation notebooks
 │   │   ├── samples/                   # Hindi audio sample
-│   │   └── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
+│   │   └── phonetic_evaluation/       # Hindi, Bengali, & Assamese evaluation results
 │   │
 │   ├── suno-bark/
 │   │   ├── notebooks/                 # suno_bark_phonetic_eval.ipynb
@@ -330,9 +394,9 @@ Indian-TTS-models/
 │   │   └── samples/                   # Male & female Hindi audio samples (MP3)
 │   │
 │   ├── vits-rasa/
-│   │   ├── notebooks/                 # vits_rasa_13.ipynb, vits_rasa_phonetic_eval.ipynb
+│   │   ├── notebooks/                 # Hindi, Bengali, & Assamese evaluation notebooks
 │   │   ├── samples/                   # Male & female Hindi audio samples
-│   │   └── phonetic_evaluation/       # Phonetic + IndicVoices evaluation results
+│   │   └── phonetic_evaluation/       # Hindi, Bengali, & Assamese evaluation results
 │   │
 │   └── voice_cloning/                 # Voice Cloning Models
 │       ├── xtts-v2/
