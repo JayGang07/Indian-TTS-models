@@ -231,7 +231,7 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 6 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
 | 7 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
 | 8 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
-| - | **Sarvam AI (Bulbul v3)** | - | - | - |
+| - | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4 |
 
 ### Model Leaderboard (Bengali Phonetics)
 
