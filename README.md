@@ -26,7 +26,7 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 > [!NOTE]
 > For a comprehensive overview, including detailed features and comparisons, view the **[Indian TTS Models Overview Spreadsheet](https://docs.google.com/spreadsheets/d/1lPsC1ouOFhUqIAKhp-tiZ-qPhk6zHms_j6_Iq5txx0g/edit?gid=37611081#gid=37611081)**.
 
-We evaluated **9 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **10 TTS models** spanning open-source research models, community models, and commercial API services:
 
 | # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning | Bengali / Assamese |
 |:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|:------------------:|
@@ -39,6 +39,7 @@ We evaluated **9 TTS models** spanning open-source research models, community mo
 | 7 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes | — |
 | 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | — |
 | 9 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | ✅ / ✅ |
+| 10 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | ✅ / — |
 
 ---
 
@@ -176,7 +177,7 @@ The Assamese evaluation set contains **20 carefully crafted sentences** targetin
 
 ### Models Tested on Bengali & Assamese
 
-Of the 9 models in our benchmark, only **4 models** natively support both Bengali and Assamese:
+Of the 10 models in our benchmark, **5 models** support Bengali and/or Assamese:
 
 | Model | Bengali Support | Assamese Support | Notebook (Bengali) | Notebook (Assamese) |
 |-------|:---------------:|:----------------:|--------------------:|--------------------:|
@@ -184,6 +185,7 @@ Of the 9 models in our benchmark, only **4 models** natively support both Bengal
 | **Meta MMS** | ✅ | ✅ | [`mms_bengali.ipynb`](models/meta-mms/notebooks/mms_bengali.ipynb) | [`mms_assamese.ipynb`](models/meta-mms/notebooks/mms_assamese.ipynb) |
 | **Indic Parler-TTS** | ✅ | ✅ | [`indic_parler_bengali.ipynb`](models/indic-parler/notebooks/indic_parler_bengali.ipynb) | [`indic_parler_assamese.ipynb`](models/indic-parler/notebooks/indic_parler_assamese.ipynb) |
 | **Indic F5** | ✅ | ✅ | [`indic_f5_bengali.ipynb`](models/indic-f5/notebooks/indic_f5_bengali.ipynb) | [`indic_f5_assamese.ipynb`](models/indic-f5/notebooks/indic_f5_assamese.ipynb) |
+| **Sarvam AI (Bulbul v3)** | ✅ | — | [`sarvam_ai_hindi_bengali.ipynb`](models/sarvam-ai/notebooks/sarvam_ai_hindi_bengali.ipynb) | — |
 
 ---
 
@@ -220,6 +222,34 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 6 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
 | 7 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
 | 8 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
+
+### Model Leaderboard (Bengali Phonetics)
+
+> [!NOTE]
+> WER and CER for Bengali evaluated using **Gnani ASR (Prisma v2.5)**. MOS is a subjective human rating (1–5 scale) averaged across 20 phonetically balanced sentences.
+
+| Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
+|:----:|-------|:---------------:|:---------------:|:----------------:|
+| 1 | **Sarvam AI — Female (ritu)** | **0.197** | **0.071** | **4.00** |
+| 2 | **Sarvam AI — Male (shubh)** | 0.200 | 0.067 | 4.00 |
+| 3 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
+| 4 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
+| 5 | **Indic F5** | — | — | 2.50 |
+| 6 | **Indic Parler-TTS** | — | — | 1.00 |
+| — | **CosyVoice 3** | — | — | — |
+
+### Model Leaderboard (Assamese Phonetics)
+
+> [!NOTE]
+> WER and CER for Assamese evaluated using **Gnani ASR (Prisma v2.5)**. MOS is a subjective human rating (1–5 scale) averaged across 20 phonetically balanced sentences.
+
+| Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
+|:----:|-------|:---------------:|:---------------:|:----------------:|
+| 1 | **Indic F5** | **0.302** | **0.091** | **3.95** |
+| 2 | **VITS Rasa 13** | 0.363 | 0.123 | 3.80 |
+| 3 | **Meta MMS** | 0.468 | 0.169 | 3.05 |
+| 4 | **Indic Parler-TTS** | 0.665 | 0.411 | 1.05 |
+| — | **Xobdo Boroxa** | — | — | 3.75 |
 
 
 ---
@@ -344,6 +374,14 @@ $$CER = \frac{S + D + I}{N}$$
 - **Indian Language Support:** Bengali, Assamese, and other Indic languages.
 - **Workspace:** [`models/indic-f5/`](models/indic-f5/)
 
+### 10. Sarvam AI — Bulbul v3 (API)
+- **Architecture:** LLM-based TTS model with automatic text normalization and context-aware prosody.
+- **Key Feature:** Commercial API service optimized for Indian languages with 30+ speaker voices, sub-250ms latency, and native Hinglish code-mixing support.
+- **Indian Language Support:** 11 languages including Hindi (hi-IN) and Bengali (bn-IN).
+- **Model:** `bulbul:v3` via the Sarvam AI Python SDK.
+- **Results:** Evaluated on both Hindi and Bengali phonetic datasets with male (shubh) and female (ritu) speaker profiles.
+- **Workspace:** [`models/sarvam-ai/`](models/sarvam-ai/)
+
 
 ## Repository Structure
 
@@ -365,7 +403,7 @@ Indian-TTS-models/
 │   └── Indian_TTS_Models_Overview.xlsx
 │
 ├── models/                            # The Core Model Workspaces
-│   ├── indic-f5/                      # [NEW] Indic F5 (AI4Bharat)
+│   ├── indic-f5/                      # Indic F5 (AI4Bharat)
 │   │   ├── notebooks/                 # indic_f5_bengali.ipynb, indic_f5_assamese.ipynb
 │   │   └── phonetic_evaluation/       # Bengali & Assamese audio ZIPs
 │   │
@@ -384,6 +422,10 @@ Indian-TTS-models/
 │   │   ├── notebooks/                 # Hindi, Bengali, & Assamese evaluation notebooks
 │   │   ├── samples/                   # Hindi audio sample
 │   │   └── phonetic_evaluation/       # Hindi, Bengali, & Assamese evaluation results
+│   │
+│   ├── sarvam-ai/                     # [NEW] Sarvam AI — Bulbul v3 (API)
+│   │   ├── notebooks/                 # sarvam_ai_hindi_bengali.ipynb
+│   │   └── phonetic_evaluation/       # Hindi & Bengali audio output ZIPs
 │   │
 │   ├── suno-bark/
 │   │   ├── notebooks/                 # suno_bark_phonetic_eval.ipynb
@@ -461,6 +503,7 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Meta Research](https://ai.meta.com/) for MMS
 - [Suno AI](https://www.suno.ai/) for Bark
 - [Hexgrad](https://huggingface.co/hexgrad) for the amazing Kokoro-82M model
+- [Sarvam AI](https://www.sarvam.ai/) for the Bulbul v3 TTS API
 
 ---
 
