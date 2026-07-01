@@ -223,7 +223,9 @@ Measures the pitch accuracy between ground truth and generated speech by compari
 
 $$\text{Log-F0 RMSE} = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left(\log F_0^{\text{ref}}(i) - \log F_0^{\text{gen}}(i)\right)^2}$$
 
-where $F_0^{\text{ref}}(i)$ and $F_0^{\text{gen}}(i)$ are the fundamental frequencies at frame $i$ for the reference and generated speech respectively, and $N$ is the total number of voiced frames.
+where:
+- $F\_0^{\text{ref}}(i)$ and $F\_0^{\text{gen}}(i)$ = fundamental frequencies at frame $i$ for the reference and generated speech
+- $N$ = total number of voiced frames
 
 **MCD (Mel Cepstral Distortion)**
 
@@ -231,15 +233,19 @@ Measures the spectral envelope similarity between two speech signals using Mel-F
 
 $$\text{MCD [dB]} = \frac{10}{\ln 10} \sqrt{2 \sum_{k=1}^{K} \left(c_k^{\text{ref}} - c_k^{\text{gen}}\right)^2}$$
 
-where $c_k^{\text{ref}}$ and $c_k^{\text{gen}}$ are the $k$-th MFCCs of the reference and generated speech, and $K$ is the number of cepstral coefficients (typically 13-24).
+where:
+- $c\_k^{\text{ref}}$ and $c\_k^{\text{gen}}$ = the $k$-th MFCCs of the reference and generated speech
+- $K$ = number of cepstral coefficients (typically 13-24)
 
 **Cosine Similarity (Speaker Embedding)**
 
 Measures speaker identity preservation by comparing the speaker embedding vectors extracted from both audio samples using a pretrained speaker verification model. The value ranges from -1 to 1, where 1.0 means the two embeddings are identical (perfect speaker match).
 
-$$\text{Cosine Similarity} = \frac{\mathbf{e}_{\text{ref}} \cdot \mathbf{e}_{\text{gen}}}{\|\mathbf{e}_{\text{ref}}\| \cdot \|\mathbf{e}_{\text{gen}}\|}$$
+$$\text{Cosine Similarity} = \frac{\vec{e}_{\text{ref}} \cdot \vec{e}_{\text{gen}}}{\lVert \vec{e}_{\text{ref}} \rVert \cdot \lVert \vec{e}_{\text{gen}} \rVert}$$
 
-where $\mathbf{e}_{\text{ref}}$ and $\mathbf{e}_{\text{gen}}$ are the d-dimensional speaker embedding vectors for the reference and generated audio.
+where:
+- $\vec{e}\_{\text{ref}}$ = speaker embedding vector for the reference audio
+- $\vec{e}\_{\text{gen}}$ = speaker embedding vector for the generated audio
 
 ---
 
