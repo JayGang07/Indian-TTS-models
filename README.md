@@ -213,6 +213,34 @@ To thoroughly compare these models, we relied on a combination of human-centric 
 - **STOI (Short-Time Objective Intelligibility):** Computes the intelligibility of synthesized speech based on acoustic features.
 - **PESQ (Perceptual Evaluation of Speech Quality):** An objective method for predicting subjective quality scores of speech.
 
+### Voice Cloning Metrics
+
+These metrics evaluate how well a voice cloning model preserves the original speaker's acoustic characteristics.
+
+**Log-F0 RMSE (Root Mean Square Error of Log Fundamental Frequency)**
+
+Measures the pitch accuracy between ground truth and generated speech by comparing the logarithm of the fundamental frequency (F0) contour. A lower value indicates closer pitch tracking.
+
+$$\text{Log-F0 RMSE} = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left(\log F_0^{\text{ref}}(i) - \log F_0^{\text{gen}}(i)\right)^2}$$
+
+where $F_0^{\text{ref}}(i)$ and $F_0^{\text{gen}}(i)$ are the fundamental frequencies at frame $i$ for the reference and generated speech respectively, and $N$ is the total number of voiced frames.
+
+**MCD (Mel Cepstral Distortion)**
+
+Measures the spectral envelope similarity between two speech signals using Mel-Frequency Cepstral Coefficients (MFCCs). It captures how closely the generated speech matches the timbral characteristics of the reference. A lower value (in dB) indicates better spectral similarity.
+
+$$\text{MCD [dB]} = \frac{10}{\ln 10} \sqrt{2 \sum_{k=1}^{K} \left(c_k^{\text{ref}} - c_k^{\text{gen}}\right)^2}$$
+
+where $c_k^{\text{ref}}$ and $c_k^{\text{gen}}$ are the $k$-th MFCCs of the reference and generated speech, and $K$ is the number of cepstral coefficients (typically 13-24).
+
+**Cosine Similarity (Speaker Embedding)**
+
+Measures speaker identity preservation by comparing the speaker embedding vectors extracted from both audio samples using a pretrained speaker verification model. The value ranges from -1 to 1, where 1.0 means the two embeddings are identical (perfect speaker match).
+
+$$\text{Cosine Similarity} = \frac{\mathbf{e}_{\text{ref}} \cdot \mathbf{e}_{\text{gen}}}{\|\mathbf{e}_{\text{ref}}\| \cdot \|\mathbf{e}_{\text{gen}}\|}$$
+
+where $\mathbf{e}_{\text{ref}}$ and $\mathbf{e}_{\text{gen}}$ are the d-dimensional speaker embedding vectors for the reference and generated audio.
+
 ---
 
 ## Quantitative Evaluation Results
@@ -317,7 +345,19 @@ graph TD
 
 ### Gnani ASR (Prisma v2.5) Transcription Engine
 
-For Indian languages like Bengali and Assamese, we chose **Gnani ASR (Prisma v2.5)** as the primary transcription engine for our evaluations. While Whisper is excellent for many global languages, Gnani's models are purpose-built for the intricacies of Indian regional dialects, code-mixing (English + regional), and complex phonologies (like Assamese rhotics or Bengali conjuncts). This allows us to get a much more accurate and fair WER/CER representation for Indian TTS models that might otherwise be penalized by generic ASR failure rather than actual generation flaws.
+[Gnani.ai](https://gnani.ai/) is an Indian AI company specializing in speech and language technologies for Indian languages. Their **Prisma v2.5** model is a production-grade ASR engine trained specifically on Indian language data, covering 12+ Indian languages with native speaker-level accuracy.
+
+**Why we chose Gnani ASR over Whisper for Bengali and Assamese:**
+
+1. **Native Indian Language Training:** Gnani's models are trained on large-scale Indian language corpora with native speakers, capturing the natural phonological patterns, prosody, and dialectal variations that Whisper's primarily Western-focused training data does not adequately represent.
+
+2. **Complex Phonology Handling:** Bengali and Assamese feature challenging phonological elements like conjunct consonants (yukta-akshar), nasalized vowels, aspirated stops, and gemination. Gnani's models are specifically optimized for these features, reducing false positives in WER/CER calculations that would arise from ASR transcription errors rather than actual TTS generation flaws.
+
+3. **Code-Mixing Support:** Indian speech frequently includes English loan words adapted to local phonotactics (e.g., "bluetooth" -> "ব্লুটুথ"). Gnani handles these mixed-language segments natively, whereas Whisper often misidentifies the language or produces garbled transcriptions at code-switching boundaries.
+
+4. **Assamese-Specific Features:** Assamese has unique phonological characteristics such as the velar fricative shift (/x/ for শ/স/ষ), the semi-vowel /w/ (ৱ), and distinct rhotic consonants (ড়/ঢ়). Gnani's dedicated Assamese model handles these far better than Whisper, which often conflates Assamese with Bengali due to script similarities.
+
+For Hindi, we continued using Whisper (medium model) as it performs well on Hindi due to the larger volume of Hindi training data available in its corpus.
 
 ### Whisper ASR Transcription Engine
 
