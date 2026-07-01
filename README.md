@@ -240,13 +240,12 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **Sarvam AI - Female (ritu)** | **0.197** | **0.071** | **4.00** |
-| 2 | **Sarvam AI - Male (shubh)** | 0.200 | 0.067 | 4.00 |
-| 3 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
-| 4 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
-| 5 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
-| 6 | **Indic F5** | 0.1845 | 0.0717 | 2.50 |
-| 7 | **Indic Parler-TTS** | 0.6581 | 0.5406 | 1.00 |
+| 1 | **Sarvam AI (Bulbul v3)** | **0.199** | **0.069** | **4.00** |
+| 2 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
+| 3 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
+| 4 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
+| 5 | **Indic F5** | 0.1845 | 0.0717 | 2.50 |
+| 6 | **Indic Parler-TTS** | 0.6581 | 0.5406 | 1.00 |
 
 ### Model Leaderboard (Assamese Phonetics)
 
