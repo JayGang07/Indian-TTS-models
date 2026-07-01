@@ -175,17 +175,24 @@ The Assamese evaluation set contains **20 carefully crafted sentences** targetin
 | **Diphthongs** | /ɔu/ (চৌ), /ɔi/ (থৈ) | চৌকা, থৈ-থৈ |
 | **Sanskrit-derived Clusters** | /kkhn/ (ক্ষ্ণ), /ɲs/ (ঞ্ছ), /gj/ (জ্ঞ) | তীক্ষ্ণ, বাঞ্ছা, প্রজ্ঞা |
 
-### Models Tested on Bengali & Assamese
+### Models Tested
 
-Of the 10 models in our benchmark, **5 models** support Bengali and/or Assamese:
+Of the models in our benchmark, they support the following languages:
 
-| Model | Bengali Support | Assamese Support | Notebook (Bengali) | Notebook (Assamese) |
-|-------|:---------------:|:----------------:|--------------------:|--------------------:|
-| **VITS Rasa 13** | ✅ | ✅ | [`vits_rasa_bengali.ipynb`](models/vits-rasa/notebooks/vits_rasa_bengali.ipynb) | [`vits_rasa_assamese.ipynb`](models/vits-rasa/notebooks/vits_rasa_assamese.ipynb) |
-| **Meta MMS** | ✅ | ✅ | [`mms_bengali.ipynb`](models/meta-mms/notebooks/mms_bengali.ipynb) | [`mms_assamese.ipynb`](models/meta-mms/notebooks/mms_assamese.ipynb) |
-| **Indic Parler-TTS** | ✅ | ✅ | [`indic_parler_bengali.ipynb`](models/indic-parler/notebooks/indic_parler_bengali.ipynb) | [`indic_parler_assamese.ipynb`](models/indic-parler/notebooks/indic_parler_assamese.ipynb) |
-| **Indic F5** | ✅ | ✅ | [`indic_f5_bengali.ipynb`](models/indic-f5/notebooks/indic_f5_bengali.ipynb) | [`indic_f5_assamese.ipynb`](models/indic-f5/notebooks/indic_f5_assamese.ipynb) |
-| **Sarvam AI (Bulbul v3)** | ✅ | — | [`sarvam_ai_hindi_bengali.ipynb`](models/sarvam-ai/notebooks/sarvam_ai_hindi_bengali.ipynb) | — |
+| Model | Hindi | Bengali | Assamese |
+|-------|:-----:|:-------:|:--------:|
+| **Kokoro** | Yes | No | No |
+| **Suno Bark** | Yes | No | No |
+| **XTTS v2** | Yes | No | No |
+| **Meta MMS** | Yes | Yes | Yes |
+| **VITS Rasa 13** | Yes | Yes | Yes |
+| **Indic Parler-TTS** | Yes | Yes | Yes |
+| **Kokoclone** | Yes | No | No |
+| **Spark TTS** | Yes | No | No |
+| **Indic F5** | No | Yes | Yes |
+| **Sarvam AI (Bulbul v3)** | Yes | Yes | No |
+| **CosyVoice 3** | No | Yes | No |
+| **Xobdo Boroxa** | No | No | Yes |
 
 ---
 
@@ -222,6 +229,7 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 6 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
 | 7 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
 | 8 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
+| - | **Sarvam AI (Bulbul v3)** | - | - | - |
 
 ### Model Leaderboard (Bengali Phonetics)
 
@@ -230,13 +238,13 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **Sarvam AI — Female (ritu)** | **0.197** | **0.071** | **4.00** |
-| 2 | **Sarvam AI — Male (shubh)** | 0.200 | 0.067 | 4.00 |
-| 3 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
-| 4 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
-| 5 | **Indic F5** | — | — | 2.50 |
-| 6 | **Indic Parler-TTS** | — | — | 1.00 |
-| — | **CosyVoice 3** | — | — | — |
+| 1 | **Sarvam AI - Female (ritu)** | **0.197** | **0.071** | **4.00** |
+| 2 | **Sarvam AI - Male (shubh)** | 0.200 | 0.067 | 4.00 |
+| 3 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
+| 4 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
+| 5 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
+| 6 | **Indic F5** | - | - | 2.50 |
+| 7 | **Indic Parler-TTS** | - | - | 1.00 |
 
 ### Model Leaderboard (Assamese Phonetics)
 
@@ -246,10 +254,10 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
 | 1 | **Indic F5** | **0.302** | **0.091** | **3.95** |
-| 2 | **VITS Rasa 13** | 0.363 | 0.123 | 3.80 |
-| 3 | **Meta MMS** | 0.468 | 0.169 | 3.05 |
-| 4 | **Indic Parler-TTS** | 0.665 | 0.411 | 1.05 |
-| — | **Xobdo Boroxa** | — | — | 3.75 |
+| 2 | **Xobdo Boroxa** | 0.324 | 0.105 | 3.75 |
+| 3 | **VITS Rasa 13** | 0.363 | 0.123 | 3.80 |
+| 4 | **Meta MMS** | 0.468 | 0.169 | 3.05 |
+| 5 | **Indic Parler-TTS** | 0.665 | 0.411 | 1.05 |
 
 
 ---
@@ -260,11 +268,15 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 graph TD
  A[Phonetically Balanced Text Dataset] --> B(TTS Model Inference)
  B --> C[Generated Audio .wav]
- C --> D(Whisper ASR Transcription)
+ C --> D(Gnani/Whisper ASR Transcription)
  D --> E{Error Calculation}
  E --> F[Word Error Rate]
  E --> G[Character Error Rate]
 ```
+
+### Gnani ASR (Prisma v2.5) Transcription Engine
+
+For Indian languages like Bengali and Assamese, we chose **Gnani ASR (Prisma v2.5)** as the primary transcription engine for our evaluations. While Whisper is excellent for many global languages, Gnani's models are purpose-built for the intricacies of Indian regional dialects, code-mixing (English + regional), and complex phonologies (like Assamese rhotics or Bengali conjuncts). This allows us to get a much more accurate and fair WER/CER representation for Indian TTS models that might otherwise be penalized by generic ASR failure rather than actual generation flaws.
 
 ### Whisper ASR Transcription Engine
 
