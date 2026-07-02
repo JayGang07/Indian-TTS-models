@@ -26,7 +26,7 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 > [!NOTE]
 > For a comprehensive overview, including detailed features and comparisons, view the **[Indian TTS Models Overview Spreadsheet](https://docs.google.com/spreadsheets/d/1lPsC1ouOFhUqIAKhp-tiZ-qPhk6zHms_j6_Iq5txx0g/edit?gid=37611081#gid=37611081)**.
 
-We evaluated **12 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **13 TTS models** spanning open-source research models, community models, and commercial API services:
 
 | # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning | Hindi | Bengali | Assamese |
 |:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|:-----:|:-------:|:--------:|
@@ -36,12 +36,13 @@ We evaluated **12 TTS models** spanning open-source research models, community m
 | 4 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | VITS (Adversarial learning) | 2024 | 40.2M | No | Yes | Yes | Yes |
 | 5 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Encoder-Decoder Transformer | 2024 | 938M | No | Yes | Yes | Yes |
 | 6 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | StyleTTS-based | 2024 | 82M | No | Yes | No | No |
-| 7 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | No |
-| 8 | **Xobdo Boroxa** | Community Model | - | 2024 | - | - | No | No | Yes |
-| 9 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes | Yes | No | No |
-| 10 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | Yes | No | No |
-| 11 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | Yes |
-| 12 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No |
+| 7 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes | Yes | No | No |
+| 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | Yes | No | No |
+| 9 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | Yes |
+| 10 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No |
+| 11 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | No |
+| 12 | **Xobdo Boroxa** | Community Model | - | 2024 | - | - | No | No | Yes |
+| 13 | **Gnani TTS** | [Gnani.ai](https://gnani.ai/) | Proprietary | 2024 | - | No | Yes | Yes | No |
 
 ---
 
@@ -195,6 +196,7 @@ Of the models in our benchmark, they support the following languages:
 | **Sarvam AI (Bulbul v3)** | Yes | Yes | No |
 | **CosyVoice 3** | No | Yes | No |
 | **Xobdo Boroxa** | No | No | Yes |
+| **Gnani TTS** | Yes | Yes | No |
 
 ---
 
@@ -258,14 +260,15 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
 | 1 | **Kokoro** | **0.359** | **0.129** | **4.65** |
-| 2 | **Suno Bark** | 0.616 | 0.292 | 4.11 |
-| 3 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
-| 4 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
-| 5 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
-| 6 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
-| 7 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
-| 8 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
-| - | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4 |
+| 2 | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4.00 |
+| 3 | **Gnani TTS** | 0.445 | 0.164 | - |
+| 4 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
+| 5 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
+| 6 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
+| 7 | **Suno Bark** | 0.616 | 0.292 | 4.11 |
+| 8 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
+| 9 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
+| 10 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
 
 ### Model Leaderboard (Bengali Phonetics)
 
@@ -274,12 +277,13 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **Sarvam AI (Bulbul v3)** | **0.199** | **0.069** | **4.00** |
-| 2 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
-| 3 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
-| 4 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
-| 5 | **Indic F5** | 0.1845 | 0.0717 | 2.50 |
-| 6 | **Indic Parler-TTS** | 0.6581 | 0.5406 | 1.00 |
+| 1 | **Indic F5** | **0.185** | **0.072** | **2.50** |
+| 2 | **Sarvam AI (Bulbul v3)** | 0.199 | 0.069 | 4.00 |
+| 3 | **Gnani TTS** | 0.233 | 0.081 | - |
+| 4 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
+| 5 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
+| 6 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
+| 7 | **Indic Parler-TTS** | 0.658 | 0.541 | 1.00 |
 
 ### Model Leaderboard (Assamese Phonetics)
 
