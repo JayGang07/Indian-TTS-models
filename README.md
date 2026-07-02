@@ -485,6 +485,25 @@ $$CER = \frac{S + D + I}{N}$$
 - **Results:** Evaluated on both Hindi and Bengali phonetic datasets with male (shubh) and female (ritu) speaker profiles.
 - **Workspace:** [`models/sarvam-ai/`](models/sarvam-ai/)
 
+### 11. CosyVoice 3
+- **Architecture:** Flow Matching Transformer (~1B parameters).
+- **Key Feature:** High-quality voice cloning and controllable speech generation.
+- **Indian Language Support:** Assamese.
+- **Workspace:** [`models/cosyvoice3/`](models/cosyvoice3/)
+
+### 12. Xobdo Boroxa
+- **Architecture:** Community Model.
+- **Key Feature:** Dedicated TTS for Assamese.
+- **Indian Language Support:** Assamese.
+- **Workspace:** [`models/xobdo-boroxa/`](models/xobdo-boroxa/)
+
+### 13. Gnani TTS (API)
+- **Architecture:** Proprietary API.
+- **Key Feature:** Production-grade speech synthesis from a leading Indian AI company.
+- **Indian Language Support:** Hindi and Bengali.
+- **Results:** Evaluated on Hindi and Bengali phonetic datasets.
+- **Workspace:** [`models/gnani-ai/`](models/gnani-ai/)
+
 
 ## Repository Structure
 
@@ -528,6 +547,10 @@ Indian-TTS-models/
 │   │
 │   ├── sarvam-ai/                     # [NEW] Sarvam AI — Bulbul v3 (API)
 │   │   ├── notebooks/                 # sarvam_ai_hindi_bengali.ipynb
+│   │   └── phonetic_evaluation/       # Hindi & Bengali audio output ZIPs
+│   │
+│   ├── gnani-ai/                      # Gnani TTS (API)
+│   │   ├── notebooks/                 # gnani_tts_hindi_bengali.ipynb
 │   │   └── phonetic_evaluation/       # Hindi & Bengali audio output ZIPs
 │   │
 │   ├── suno-bark/
@@ -607,6 +630,7 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Suno AI](https://www.suno.ai/) for Bark
 - [Hexgrad](https://huggingface.co/hexgrad) for the amazing Kokoro-82M model
 - [Sarvam AI](https://www.sarvam.ai/) for the Bulbul v3 TTS API
+- [Gnani.ai](https://gnani.ai/) for their Gnani TTS and Prisma v2.5 ASR models
 
 ---
 
