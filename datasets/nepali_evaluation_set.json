@@ -1,0 +1,102 @@
+[
+  {
+    "EVALUATION SET": "velars_gutturals",
+    "ID": "NEP_01",
+    "TEXT": "कागती खाएर केटाकेटीहरू खुसी हुँदै घर गए।"
+  },
+  {
+    "EVALUATION SET": "palatals_and_trills",
+    "ID": "NEP_02",
+    "TEXT": "चराहरू चिरबिर गर्दै चाँडै उडेर चौतारीमा बसे।"
+  },
+  {
+    "EVALUATION SET": "retroflexes_and_nasalization",
+    "ID": "NEP_03",
+    "TEXT": "ठूलो डाँडामाथि ढकमक्क गुराँस फुल्दा धेरै राम्रो देखिन्छ।"
+  },
+  {
+    "EVALUATION SET": "labials_and_nasalization",
+    "ID": "NEP_04",
+    "TEXT": "फराकिलो बाटोमा भाइ र बहिनी पानी पिउँदै हिँडे।"
+  },
+  {
+    "EVALUATION SET": "fricatives_and_glides",
+    "ID": "NEP_05",
+    "TEXT": "शहरको शान्त सडकमा हिजो बेलुका हुरी चल्यो।"
+  },
+  {
+    "EVALUATION SET": "nasals_and_conjuncts",
+    "ID": "NEP_06",
+    "TEXT": "मेरो नयाँ घरमा जताततै घामको न्यानो उज्यालो आउँछ।"
+  },
+  {
+    "EVALUATION SET": "complex_conjuncts",
+    "ID": "NEP_07",
+    "TEXT": "ज्ञान र विज्ञानको क्षेत्रमा प्रगति गर्न निरन्तर मिहिनेत आवश्यक छ।"
+  },
+  {
+    "EVALUATION SET": "dentals_and_vowel_lengths",
+    "ID": "NEP_08",
+    "TEXT": "किसानले खेतमा धान रोपेर मुरी फलाउने आशा राखेका छन्।"
+  },
+  {
+    "EVALUATION SET": "affricates_and_labiodentals",
+    "ID": "NEP_09",
+    "TEXT": "चाडपर्वमा मान्यजनको हातबाट टीका र जमरा थाप्नु हाम्रो परम्परा हो।"
+  },
+  {
+    "EVALUATION SET": "retroflex_flaps",
+    "ID": "NEP_10",
+    "TEXT": "वर्षायाममा खोलानाला बढेर बाढी आउने खतरा सधैँ रहन्छ।"
+  },
+  {
+    "EVALUATION SET": "retroflex_nasals_and_clusters",
+    "ID": "NEP_11",
+    "TEXT": "शिक्षकले कक्षामा गणित र व्याकरणका कठिन प्रश्नहरू सोध्नुभयो।"
+  },
+  {
+    "EVALUATION SET": "unaspirated_and_aspirated_stops",
+    "ID": "NEP_12",
+    "TEXT": "आमाले बिहानै उठेर मीठो सेलरोटी र तरकारी पकाउनुभयो।"
+  },
+  {
+    "EVALUATION SET": "velar_nasals_and_heavy_aspirates",
+    "ID": "NEP_13",
+    "TEXT": "जङ्गलमा बाघ, भालु, गैँडा र हात्तीजस्ता जङ्गली जनावरहरू पाइन्छन्।"
+  },
+  {
+    "EVALUATION SET": "visarga_and_glides",
+    "ID": "NEP_14",
+    "TEXT": "दुःख र सुख जीवनका दुई पाटा हुन्, त्यसैले धैर्य गर्नुपर्छ।"
+  },
+  {
+    "EVALUATION SET": "dense_consonant_clusters",
+    "ID": "NEP_15",
+    "TEXT": "स्वास्थ्य नै धन हो, त्यसैले सन्तुलित भोजन र व्यायाममा ध्यान दिनुपर्छ।"
+  },
+  {
+    "EVALUATION SET": "loan_words_and_retroflexes",
+    "ID": "NEP_16",
+    "TEXT": "आजकल मोबाइल र इन्टरनेटको माध्यमबाट संसारभरको खबर क्षणभरमै सुन्न सकिन्छ।"
+  },
+  {
+    "EVALUATION SET": "geminates_and_labials",
+    "ID": "NEP_17",
+    "TEXT": "बजारमा तरकारी र फलफूलको भाउ एक्कासि बढेर ग्राहकहरू मारमा परेका छन्।"
+  },
+  {
+    "EVALUATION SET": "palatal_aspirates_and_liquids",
+    "ID": "NEP_18",
+    "TEXT": "लोकगीत र बाँसुरीको धुनले गाउँको रातलाई झनै रमाइलो बनाउँछ।"
+  },
+  {
+    "EVALUATION SET": "alveolar_fricatives_and_nasal_conjuncts",
+    "ID": "NEP_19",
+    "TEXT": "सगरमाथाको चुचुरोमा पुग्न हिउँ र चिसो हावासँग सङ्घर्ष गर्नुपर्छ।"
+  },
+  {
+    "EVALUATION SET": "approximants_and_flow",
+    "ID": "NEP_20",
+    "TEXT": "यो लामो बाटो पार गर्न युवाहरूलाई एकदमै रमाइलो लाग्छ।"
+  }
+]
