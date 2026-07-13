@@ -26,7 +26,7 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 > [!NOTE]
 > For a comprehensive overview, including detailed features and comparisons, view the **[Indian TTS Models Overview Spreadsheet](https://docs.google.com/spreadsheets/d/1lPsC1ouOFhUqIAKhp-tiZ-qPhk6zHms_j6_Iq5txx0g/edit?gid=37611081#gid=37611081)**.
 
-We evaluated **14 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **18 TTS models** spanning open-source research models, community models, and commercial API services:
 
 | # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning | Hindi | Bengali | Assamese | Nepali |
 |:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|:-----:|:-------:|:--------:|:------:|
@@ -40,10 +40,14 @@ We evaluated **14 TTS models** spanning open-source research models, community m
 | 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | Yes | No | No | No |
 | 9 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | Yes | No |
 | 10 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No |
-| 11 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | No | No |
+| 11 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | Yes | No |
 | 12 | **Xobdo Boroxa** | Community Model | - | 2024 | - | - | No | No | Yes | No |
 | 13 | **Gnani TTS** | [Gnani.ai](https://gnani.ai/) | Proprietary | 2024 | - | No | Yes | Yes | No | No |
 | 14 | **TuskByte-v1** | [TuskByte](https://huggingface.co/tuskbyte/nepali_male_v1) | VITS-based | 2024 | - | No | No | No | No | Yes |
+| 15 | **Oshara (XTTS v2 Nepali)** | [Oshara](https://huggingface.co/Oshara/xtts-v2-nepali) | Auto-regressive Transformer (Fine-tuned) | 2025 | 518M | Yes | Yes | No | No | Yes |
+| 16 | **FastSpeech 2 (Piper/ESPnet)** | [SMTIITM](https://huggingface.co/smtiitm/Fastspeech2_HS) / [Ampixa](https://huggingface.co/ampixa/real-nepali-v0.2-kala) | FastSpeech 2 / VITS (Piper) | 2024 | ~40M | No | Yes | Yes | Yes | Yes |
+| 17 | **Sooktam2 (F5-TTS)** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | No | No |
+| 18 | **Sonic v3** | [Cartesia](https://cartesia.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No |
 
 ---
 
@@ -213,10 +217,14 @@ Of the models in our benchmark, they support the following languages:
 | **Spark TTS** | Yes | No | No | No |
 | **Indic F5** | No | Yes | Yes | No |
 | **Sarvam AI (Bulbul v3)** | Yes | Yes | No | No |
-| **CosyVoice 3** | No | Yes | No | No |
+| **CosyVoice 3** | No | Yes | Yes | No |
 | **Xobdo Boroxa** | No | No | Yes | No |
 | **Gnani TTS** | Yes | Yes | No | No |
 | **TuskByte-v1** | No | No | No | Yes |
+| **Oshara (XTTS v2 Nepali)** | Yes | No | No | Yes |
+| **FastSpeech 2 (Piper/ESPnet)** | Yes | Yes | Yes | Yes |
+| **Sooktam2 (F5-TTS)** | Yes | Yes | No | No |
+| **Sonic v3** | Yes | Yes | No | No |
 
 ---
 
@@ -283,15 +291,18 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
 | 1 | **Kokoro** | **0.359** | **0.129** | **4.65** |
-| 2 | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4.00 |
-| 3 | **Gnani TTS** | 0.445 | 0.164 | - |
-| 4 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
-| 5 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
-| 6 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
-| 7 | **Suno Bark** | 0.616 | 0.292 | 4.11 |
-| 8 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
-| 9 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
-| 10 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
+| 2 | **FastSpeech 2 (Piper)** | 0.401 | 0.157 | - |
+| 3 | **Sonic v3** | 0.417 | 0.168 | - |
+| 4 | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4.00 |
+| 5 | **Gnani TTS** | 0.445 | 0.164 | - |
+| 6 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
+| 7 | **Oshara (XTTS v2 Nepali)** | 0.561 | 0.222 | - |
+| 8 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
+| 9 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
+| 10 | **Suno Bark** | 0.616 | 0.292 | 4.11 |
+| 11 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
+| 12 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
+| 13 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
 
 ### Model Leaderboard (Bengali Phonetics)
 
@@ -302,11 +313,13 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 |:----:|-------|:---------------:|:---------------:|:----------------:|
 | 1 | **Indic F5** | **0.185** | **0.072** | **2.50** |
 | 2 | **Sarvam AI (Bulbul v3)** | 0.199 | 0.069 | 4.00 |
-| 3 | **Gnani TTS** | 0.233 | 0.081 | - |
-| 4 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
-| 5 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
-| 6 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
-| 7 | **Indic Parler-TTS** | 0.658 | 0.541 | 1.00 |
+| 3 | **Sonic v3** | 0.218 | 0.077 | - |
+| 4 | **Gnani TTS** | 0.233 | 0.081 | - |
+| 5 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
+| 6 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
+| 7 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
+| 8 | **Indic Parler-TTS** | 0.658 | 0.541 | 1.00 |
+| 9 | **FastSpeech 2 (ESPnet)** | 1.648 | 1.308 | - |
 
 ### Model Leaderboard (Assamese Phonetics)
 
@@ -329,7 +342,9 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
 | 1 | **TuskByte-v1** | - | - | - |
-| 2 | **Indic Parler-TTS** | 1.697 | 1.852 | - |
+| 2 | **Oshara (XTTS v2 Nepali)** | 1.044 | 0.292 | - |
+| 3 | **FastSpeech (Kala-TTS)** | 1.091 | 0.408 | - |
+| 4 | **Indic Parler-TTS** | 1.697 | 1.852 | - |
 
 
 ---
@@ -521,7 +536,7 @@ $$CER = \frac{S + D + I}{N}$$
 ### 11. CosyVoice 3
 - **Architecture:** Flow Matching Transformer (~1B parameters).
 - **Key Feature:** High-quality voice cloning and controllable speech generation.
-- **Indian Language Support:** Assamese.
+- **Indian Language Support:** Assamese, Bengali.
 - **Workspace:** [`models/cosyvoice3/`](models/cosyvoice3/)
 
 ### 12. Xobdo Boroxa
@@ -542,6 +557,33 @@ $$CER = \frac{S + D + I}{N}$$
 - **Key Feature:** Open-source Nepali-specific TTS model with male voice, filling a gap left by Meta MMS which excluded Nepali from its TTS release.
 - **Indian Language Support:** Nepali.
 - **Workspace:** [`models/tuskbyte-v1/`](models/tuskbyte-v1/)
+
+### 15. Oshara (XTTS v2 Nepali Fine-tune)
+- **Architecture:** Auto-regressive transformer-based TTS (XTTS v2), fine-tuned specifically for Nepali.
+- **Key Feature:** Zero-shot voice cloning from a short audio reference, fine-tuned on Nepali data with the ability to generalize to Hindi. Uses IndicVoices_R for reference voices.
+- **Indian Language Support:** Hindi (via generalization), Nepali (primary).
+- **Results:** Evaluated on both Hindi (avg WER: 0.561, CER: 0.222) and Nepali (avg WER: 1.044, CER: 0.292) phonetic datasets with male and female speakers.
+- **Workspace:** [`models/oshara/`](models/oshara/)
+
+### 16. FastSpeech 2 (Piper / ESPnet)
+- **Architecture:** FastSpeech 2 — a non-autoregressive TTS model. Hindi uses [Piper](https://github.com/rhasspy/piper) with the `priyamvada` Hindi Female voice. Bengali and Assamese use the [SMTIITM/Fastspeech2_HS](https://huggingface.co/smtiitm/Fastspeech2_HS) ESPnet model. Nepali uses [Ampixa/real-nepali-v0.2-kala](https://huggingface.co/ampixa/real-nepali-v0.2-kala) via Kala-TTS.
+- **Key Feature:** Fast, parallel synthesis without autoregressive decoding. Supports multiple Indian languages through different model variants.
+- **Indian Language Support:** Hindi, Bengali, Assamese, Nepali.
+- **Results:** Hindi WER 0.401 / CER 0.157, Bengali WER 1.648 / CER 1.308, Assamese WER 2.096 / CER 1.246, Nepali WER 1.091 / CER 0.408.
+- **Workspace:** [`models/fastspeech/`](models/fastspeech/)
+
+### 17. Sooktam2 (F5-TTS Voice Cloning)
+- **Architecture:** Flow-matching Transformer based on the F5-TTS architecture (Sooktam2 variant).
+- **Key Feature:** High-quality voice cloning for Indian languages using IndicVoices_R reference audio. Generates both male and female speech from a single reference speaker sample.
+- **Indian Language Support:** Hindi, Bengali.
+- **Workspace:** [`models/sooktam/`](models/sooktam/)
+
+### 18. Sonic v3 (Cartesia API)
+- **Architecture:** LLM-based TTS model served via Cartesia API.
+- **Key Feature:** Commercial API with high-quality multilingual speech synthesis. Supports Hindi and Bengali with good intelligibility.
+- **Indian Language Support:** Hindi, Bengali.
+- **Results:** Hindi WER 0.417 / CER 0.168, Bengali WER 0.218 / CER 0.077 (Gnani ASR).
+- **Workspace:** [`models/sonic/`](models/sonic/)
 
 
 ## Repository Structure
@@ -596,6 +638,26 @@ Indian-TTS-models/
 │   ├── tuskbyte-v1/                   # TuskByte-v1 (Nepali VITS)
 │   │   ├── notebooks/                 # tuskbyte_v1_nepali.ipynb
 │   │   └── phonetic_evaluation/       # Nepali audio output ZIP
+│   │
+│   ├── oshara/                        # Oshara (XTTS v2 Nepali Fine-tune)
+│   │   ├── notebooks/                 # oshara_hindi.ipynb, oshara_nepali.ipynb
+│   │   └── phonetic_evaluation/       # Hindi & Nepali audio output ZIPs
+│   │
+│   ├── fastspeech/                    # FastSpeech 2 (Piper / ESPnet / Kala-TTS)
+│   │   ├── notebooks/                 # fast_speech_hindi.ipynb, fastspeech_nepali.ipynb, fastspeech_bengali&assamese.ipynb
+│   │   └── phonetic_evaluation/       # Hindi, Bengali, Assamese & Nepali audio ZIPs
+│   │
+│   ├── sooktam/                       # Sooktam2 (F5-TTS Voice Cloning)
+│   │   ├── notebooks/                 # sooktam_hindi.ipynb, sooktam_bengali.ipynb
+│   │   └── phonetic_evaluation/       # Hindi & Bengali audio output ZIPs
+│   │
+│   ├── cosyvoice3/                    # CosyVoice 3 (Alibaba)
+│   │   ├── notebooks/                 # cosyvoice3_bengali.ipynb
+│   │   └── phonetic_evaluation/       # Bengali audio output ZIP
+│   │
+│   ├── sonic/                         # Sonic v3 (Cartesia API)
+│   │   ├── notebooks/                 # sonic_v3_hindi.ipynb, sonicv3_bengali.ipynb
+│   │   └── phonetic_evaluation/       # Hindi & Bengali audio ZIPs
 │   │
 │   ├── suno-bark/
 │   │   ├── notebooks/                 # suno_bark_phonetic_eval.ipynb
@@ -676,6 +738,10 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Sarvam AI](https://www.sarvam.ai/) for the Bulbul v3 TTS API
 - [Gnani.ai](https://gnani.ai/) for their Gnani TTS and Prisma v2.5 ASR models
 - [TuskByte](https://huggingface.co/tuskbyte) for the Nepali male VITS TTS model
+- [Oshara](https://huggingface.co/Oshara) for the XTTS v2 Nepali fine-tuned model
+- [SMTIITM](https://huggingface.co/smtiitm) for the FastSpeech2_HS model for Indian languages
+- [Ampixa](https://huggingface.co/ampixa) for the Kala-TTS Nepali model
+- [Cartesia](https://cartesia.ai/) for the Sonic v3 TTS API
 
 ---
 
