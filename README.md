@@ -290,19 +290,21 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **Kokoro** | **0.359** | **0.129** | **4.65** |
-| 2 | **FastSpeech 2 (Piper)** | 0.401 | 0.157 | - |
-| 3 | **Sonic v3** | 0.417 | 0.168 | - |
+| 1 | **Kokoro** | **0.359** | **0.129** | **4.60** |
+| 2 | **FastSpeech 2 (Piper)** | 0.401 | 0.157 | 4.25 |
+| 3 | **Sonic v3** | 0.417 | 0.168 | 4.50 |
 | 4 | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4.00 |
 | 5 | **Gnani TTS** | 0.445 | 0.164 | - |
 | 6 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
-| 7 | **Oshara (XTTS v2 Nepali)** | 0.561 | 0.222 | - |
+| 7 | **Oshara (XTTS v2 Nepali)** | 0.561 | 0.222 | 2.90 |
 | 8 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
-| 9 | **VITS Rasa 13** | 0.573 | 0.232 | 2.03 |
-| 10 | **Suno Bark** | 0.616 | 0.292 | 4.11 |
-| 11 | **Kokoclone** | 0.793 | 0.642 | 0.00 |
-| 12 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.53 |
+| 9 | **VITS Rasa 13** | 0.573 | 0.232 | 2.05 |
+| 10 | **Suno Bark** | 0.616 | 0.292 | 4.08 |
+| 11 | **Kokoclone** | 0.793 | 0.642 | 0.25 |
+| 12 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.20 |
 | 13 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
+| 14 | **Sooktam2 (F5-TTS)** | - | - | 2.40 |
+| 15 | **Vachana TTS** | - | - | 3.85 |
 
 ### Model Leaderboard (Bengali Phonetics)
 
@@ -313,13 +315,14 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 |:----:|-------|:---------------:|:---------------:|:----------------:|
 | 1 | **Indic F5** | **0.185** | **0.072** | **2.50** |
 | 2 | **Sarvam AI (Bulbul v3)** | 0.199 | 0.069 | 4.00 |
-| 3 | **Sonic v3** | 0.218 | 0.077 | - |
+| 3 | **Sonic v3** | 0.218 | 0.077 | 3.95 |
 | 4 | **Gnani TTS** | 0.233 | 0.081 | - |
-| 5 | **CosyVoice 3** | 0.236 | 0.076 | 3.50 |
+| 5 | **CosyVoice 3** | 0.236 | 0.076 | 3.65 |
 | 6 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
 | 7 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
 | 8 | **Indic Parler-TTS** | 0.658 | 0.541 | 1.00 |
-| 9 | **FastSpeech 2 (ESPnet)** | 1.648 | 1.308 | - |
+| 9 | **FastSpeech 2 (ESPnet)** | 1.648 | 1.308 | 3.47 |
+| 10 | **Sooktam2 (F5-TTS)** | - | - | 2.45 |
 
 ### Model Leaderboard (Assamese Phonetics)
 
@@ -333,6 +336,7 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 3 | **VITS Rasa 13** | 0.363 | 0.123 | 3.80 |
 | 4 | **Meta MMS** | 0.468 | 0.169 | 3.05 |
 | 5 | **Indic Parler-TTS** | 0.665 | 0.411 | 1.05 |
+| 6 | **FastSpeech 2 (ESPnet)** | 2.096 | 1.246 | 2.30 |
 
 ### Model Leaderboard (Nepali Phonetics)
 
@@ -341,10 +345,10 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **TuskByte-v1** | 1.244 | 0.723 | - |
-| 2 | **Oshara (XTTS v2 Nepali)** | 1.044 | 0.292 | - |
-| 3 | **FastSpeech (Kala-TTS)** | 1.091 | 0.408 | - |
-| 4 | **Indic Parler-TTS** | 1.697 | 1.852 | - |
+| 1 | **TuskByte-v1** | 1.244 | 0.723 | 1.85 |
+| 2 | **Oshara (XTTS v2 Nepali)** | 1.044 | 0.292 | 3.48 |
+| 3 | **FastSpeech (Kala-TTS)** | 1.091 | 0.408 | 2.30 |
+| 4 | **Indic Parler-TTS** | 1.697 | 1.852 | 0.65 |
 
 
 ---
