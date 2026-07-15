@@ -42,7 +42,7 @@ We evaluated **18 TTS models** spanning open-source research models, community m
 | 10 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No |
 | 11 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | Yes | No |
 | 12 | **Xobdo Boroxa** | Community Model | - | 2024 | - | - | No | No | Yes | No |
-| 13 | **Gnani TTS** | [Gnani.ai](https://gnani.ai/) | Proprietary | 2024 | - | No | Yes | Yes | No | No |
+| 13 | **Vachana TTS (Gnani)** | [Gnani.ai](https://gnani.ai/) | Proprietary | 2024 | - | No | Yes | Yes | No | No |
 | 14 | **TuskByte-v1** | [TuskByte](https://huggingface.co/tuskbyte/nepali_male_v1) | VITS-based | 2024 | - | No | No | No | No | Yes |
 | 15 | **Oshara (XTTS v2 Nepali)** | [Oshara](https://huggingface.co/Oshara/xtts-v2-nepali) | Auto-regressive Transformer (Fine-tuned) | 2025 | 518M | Yes | Yes | No | No | Yes |
 | 16 | **FastSpeech 2 (Piper/ESPnet)** | [SMTIITM](https://huggingface.co/smtiitm/Fastspeech2_HS) / [Ampixa](https://huggingface.co/ampixa/real-nepali-v0.2-kala) | FastSpeech 2 / VITS (Piper) | 2024 | ~40M | No | Yes | Yes | Yes | Yes |
@@ -219,7 +219,7 @@ Of the models in our benchmark, they support the following languages:
 | **Sarvam AI (Bulbul v3)** | Yes | Yes | No | No |
 | **CosyVoice 3** | No | Yes | Yes | No |
 | **Xobdo Boroxa** | No | No | Yes | No |
-| **Gnani TTS** | Yes | Yes | No | No |
+| **Vachana TTS (Gnani)** | Yes | Yes | No | No |
 | **TuskByte-v1** | No | No | No | Yes |
 | **Oshara (XTTS v2 Nepali)** | Yes | No | No | Yes |
 | **FastSpeech 2 (Piper/ESPnet)** | Yes | Yes | Yes | Yes |
@@ -293,18 +293,17 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 1 | **Kokoro** | **0.359** | **0.129** | **4.60** |
 | 2 | **FastSpeech 2 (Piper)** | 0.401 | 0.157 | 4.25 |
 | 3 | **Sonic v3** | 0.417 | 0.168 | 4.50 |
-| 4 | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4.00 |
-| 5 | **Gnani TTS** | 0.445 | 0.164 | - |
-| 6 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
-| 7 | **Oshara (XTTS v2 Nepali)** | 0.561 | 0.222 | 2.90 |
-| 8 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
-| 9 | **VITS Rasa 13** | 0.573 | 0.232 | 2.05 |
-| 10 | **Suno Bark** | 0.616 | 0.292 | 4.08 |
-| 11 | **Kokoclone** | 0.793 | 0.642 | 0.25 |
-| 12 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.20 |
-| 13 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
-| 14 | **Sooktam2 (F5-TTS)** | - | - | 2.40 |
-| 15 | **Vachana TTS** | - | - | 3.85 |
+| 4 | **Sooktam2 (F5-TTS)** | 0.420 | 0.150 | 2.40 |
+| 5 | **Sarvam AI (Bulbul v3)** | 0.435 | 0.435 | 4.00 |
+| 6 | **Vachana TTS (Gnani)** | 0.445 | 0.164 | 3.85 |
+| 7 | **XTTS v2** | 0.525 | 0.217 | 3.00 |
+| 8 | **Oshara (XTTS v2 Nepali)** | 0.561 | 0.222 | 2.90 |
+| 9 | **Meta MMS** | 0.566 | 0.209 | 2.52 |
+| 10 | **VITS Rasa 13** | 0.573 | 0.232 | 2.05 |
+| 11 | **Suno Bark** | 0.616 | 0.292 | 4.08 |
+| 12 | **Kokoclone** | 0.793 | 0.642 | 0.25 |
+| 13 | **Indic Parler-TTS** | 0.892 | 0.645 | 0.20 |
+| 14 | **Spark TTS** | 0.981 | 0.842 | 0.00 |
 
 ### Model Leaderboard (Bengali Phonetics)
 
@@ -316,7 +315,7 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 1 | **Indic F5** | **0.185** | **0.072** | **2.50** |
 | 2 | **Sarvam AI (Bulbul v3)** | 0.199 | 0.069 | 4.00 |
 | 3 | **Sonic v3** | 0.218 | 0.077 | 3.95 |
-| 4 | **Gnani TTS** | 0.233 | 0.081 | - |
+| 4 | **Vachana TTS (Gnani)** | 0.233 | 0.081 | - |
 | 5 | **CosyVoice 3** | 0.236 | 0.076 | 3.65 |
 | 6 | **VITS Rasa 13** | 0.237 | 0.081 | 3.50 |
 | 7 | **Meta MMS** | 0.305 | 0.113 | 2.50 |
@@ -549,11 +548,10 @@ $$CER = \frac{S + D + I}{N}$$
 - **Indian Language Support:** Assamese.
 - **Workspace:** [`models/xobdo-boroxa/`](models/xobdo-boroxa/)
 
-### 13. Gnani TTS (API)
-- **Architecture:** Proprietary API.
-- **Key Feature:** Production-grade speech synthesis from a leading Indian AI company.
-- **Indian Language Support:** Hindi and Bengali.
-- **Results:** Evaluated on Hindi and Bengali phonetic datasets.
+### 13. Vachana TTS (Gnani API)
+- **Architecture:** Proprietary.
+- **Key Feature:** Highly accurate native Indian language TTS.
+- **Indian Language Support:** Hindi, Bengali.
 - **Workspace:** [`models/gnani-ai/`](models/gnani-ai/)
 
 ### 14. TuskByte-v1
@@ -740,7 +738,7 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Suno AI](https://www.suno.ai/) for Bark
 - [Hexgrad](https://huggingface.co/hexgrad) for the amazing Kokoro-82M model
 - [Sarvam AI](https://www.sarvam.ai/) for the Bulbul v3 TTS API
-- [Gnani.ai](https://gnani.ai/) for their Gnani TTS and Prisma v2.5 ASR models
+- [Gnani.ai](https://gnani.ai/) for their Vachana TTS and Prisma v2.5 ASR models
 - [TuskByte](https://huggingface.co/tuskbyte) for the Nepali male VITS TTS model
 - [Oshara](https://huggingface.co/Oshara) for the XTTS v2 Nepali fine-tuned model
 - [SMTIITM](https://huggingface.co/smtiitm) for the FastSpeech2_HS model for Indian languages
