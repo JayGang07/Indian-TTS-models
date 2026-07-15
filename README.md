@@ -356,6 +356,15 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 To evaluate the fidelity of models capable of voice cloning, we measured the acoustic similarities between the generated audio and the original speaker's ground truth audio. The evaluation was conducted by first temporally aligning the generated audio and the ground truth using the **Dynamic Time Warping (DTW)** method to ensure accurate frame-by-frame comparison. Following alignment, **WaveSurfer** was utilized to perform speech analysis and extract acoustic features.
 
+### Why Dynamic Time Warping (DTW)?
+
+We explicitly chose Dynamic Time Warping (DTW) because it is the exact mathematical algorithm designed to solve the "Rubber Band Problem" of human speech. When evaluating a voice clone, the ground truth and generated audio will almost never be the exact same length, even if they say the exact same words. The AI model might take a fraction of a second longer to pronounce a vowel, or it might breathe slightly faster between words. If you try to compare these two audio files using standard math, it immediately breaks down. Here is exactly why DTW was the perfect and necessary choice for our evaluation pipeline:
+
+1. **It Solves Non-Linear Time (The Rubber Band Effect):** If the ground truth is 7.0 seconds and the generated audio is 7.2 seconds, you cannot just chop off the last 0.2 seconds and compare them. The timing differences are scattered throughout the audio. DTW acts like a mathematical rubber band. It looks at the acoustic features (like a heavy 'B' sound or a high-pitched 'E' vowel) and stretches or squishes the generated audio's timeline locally so that the syllables align perfectly over each other, without distorting the actual sound data.
+2. **It Enables Direct Array-to-Array Math:** To calculate Mel Cepstral Distortion (MCD) or Cosine Similarity, the computer needs to perform matrix subtraction. You can only subtract Array B from Array A if they have the exact same number of frames. DTW generates a "warping path". This path tells the computer exactly which frame in the generated audio corresponds to which frame in the ground truth, forcing both feature arrays to become the exact same shape so the metrics calculate flawlessly.
+3. **Pure Acoustic Focus (No Text Required):** Unlike other alignment models that require a written transcript to figure out where words are, DTW is entirely acoustic. It doesn't care what language is being spoken, what the words mean, or if the audio is just someone humming. It purely measures the physical energy of the sound waves (using MFCCs) and aligns them based on how similar they sound. Since the goal is to evaluate the physical quality of a voice clone, an acoustic-only alignment is exactly what is needed.
+4. **The Industry Standard for Voice Conversion:** In academic research for Text-to-Speech (TTS) and Voice Conversion (like XTTS v2), DTW is the universally accepted standard for calculating MCD. By using it, we guarantee that the metrics are scientifically valid and comparable to published papers in the AI audio space.
+
 ### XTTS Voice Cloning Results
 
 **Acoustic Similarity Metrics (Average across samples):**
@@ -702,6 +711,13 @@ Indian-TTS-models/
     ├── Testing_Indian_TTS_models.ipynb
     └── VITS_rasa_finetune.ipynb       # Cross-model evaluation (VITS Rasa + Kokoro)
 ```
+
+## Challenges & Shortcomings in Indic TTS Evaluation
+
+1. **Nepali Language Support:** Among the four target languages, Nepali had the least model support. The majority of evaluated models either lacked a dedicated Nepali language configuration or had not been trained on Nepali corpora, significantly limiting the pool of viable candidates for that language.
+2. **Restricted Access:** Several models could not be fully evaluated due to gated or restricted access to pretrained checkpoints. This is a recurring limitation in the Indic TTS landscape, where model weights are often tied to institutional repositories or require approval-based access, impeding reproducible benchmarking.
+3. **Phonetic Accuracy:** Phonetic accuracy was a significant shortcoming across all four languages. Errors were observed in the handling of conjunct consonants, dependent vowel signs, nukta-modified characters, schwa deletion, and nasalization markers (anusvara/chandrabindu). These errors are attributable to shallow or language-agnostic G2P modules that do not encode the orthographic rules specific to each script.
+4. **Environment Standardization:** Standardizing the evaluation environment across 18 models with varying dependency requirements posed a practical challenge. Tokenizer-level incompatibilities, version conflicts in core libraries, and runtime constraints on cloud GPU environments affected the consistency of evaluation conditions across models.
 
 ---
 
