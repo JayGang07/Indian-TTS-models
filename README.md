@@ -344,10 +344,10 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **TuskByte-v1** | 1.244 | 0.723 | 1.85 |
-| 2 | **Oshara (XTTS v2 Nepali)** | 1.044 | 0.292 | 3.48 |
-| 3 | **FastSpeech (Kala-TTS)** | 1.091 | 0.408 | 2.30 |
-| 4 | **Indic Parler-TTS** | 1.697 | 1.852 | 0.65 |
+| 1 | **TuskByte-v1** | 0.424 | 0.223 | 1.85 |
+| 2 | **Oshara (XTTS v2 Nepali)** | 0.324 | 0.292 | 3.48 |
+| 3 | **FastSpeech (Kala-TTS)** | 0.391 | 0.208 | 2.30 |
+| 4 | **Indic Parler-TTS** | 0.397 | 0.252 | 0.65 |
 
 
 ---
