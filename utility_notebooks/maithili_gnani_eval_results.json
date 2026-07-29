@@ -1,0 +1,32 @@
+[
+  {
+    "model": "Meta MMS (VITS)",
+    "language_code": "hi-IN",
+    "total_samples": 20,
+    "success": 20,
+    "errors": 0,
+    "avg_wer": 0.8306,
+    "avg_cer": 0.4022,
+    "timestamp": "2026-07-30T00:55:17.103620"
+  },
+  {
+    "model": "Indic Parler-TTS",
+    "language_code": "hi-IN",
+    "total_samples": 20,
+    "success": 20,
+    "errors": 0,
+    "avg_wer": 0.9639,
+    "avg_cer": 0.7863,
+    "timestamp": "2026-07-30T00:56:17.365414"
+  },
+  {
+    "model": "Syspin VITS",
+    "language_code": "hi-IN",
+    "total_samples": 20,
+    "success": 20,
+    "errors": 0,
+    "avg_wer": 0.9037,
+    "avg_cer": 0.3905,
+    "timestamp": "2026-07-30T00:57:08.611680"
+  }
+]

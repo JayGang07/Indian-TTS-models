@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-This project benchmarks open-source and API-based **Text-to-Speech (TTS)** models for **Indian languages**, with evaluation across **Hindi, Bengali, Assamese, and Nepali**. The goal is to establish a standardized evaluation framework for comparing Indian language speech synthesis models across key quality dimensions — naturalness, intelligibility, prosody, and voice cloning fidelity.
+This project benchmarks open-source and API-based **Text-to-Speech (TTS)** models for **Indian languages**, with evaluation across **Hindi, Bengali, Assamese, Nepali, Urdu, and Maithili**. The goal is to establish a standardized evaluation framework for comparing Indian language speech synthesis models across key quality dimensions — naturalness, intelligibility, prosody, and voice cloning fidelity.
 
 This work is carried out as part of an internship at **[Kaliber.AI](https://kaliber.ai) / Bay Area Advanced Analytics**.
 
@@ -26,28 +26,29 @@ This work is carried out as part of an internship at **[Kaliber.AI](https://kali
 > [!NOTE]
 > For a comprehensive overview, including detailed features and comparisons, view the **[Indian TTS Models Overview Spreadsheet](https://docs.google.com/spreadsheets/d/1lPsC1ouOFhUqIAKhp-tiZ-qPhk6zHms_j6_Iq5txx0g/edit?gid=37611081#gid=37611081)**.
 
-We evaluated **18 TTS models** spanning open-source research models, community models, and commercial API services:
+We evaluated **19 TTS models** spanning open-source research models, community models, and commercial API services:
 
-| # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning | Hindi | Bengali | Assamese | Nepali |
-|:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|:-----:|:-------:|:--------:|:------:|
-| 1 | **XTTS v2** | [Coqui TTS](https://github.com/coqui-ai/TTS) | Auto-regressive Transformer | 2023 | 518M | Yes | Yes | No | No | No |
-| 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | VITS-based | 2023 | 300M | No | Yes | Yes | Yes | No |
-| 3 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Transformer-based Text-to-Audio | 2023 | 550M | No | Yes | No | No | No |
-| 4 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | VITS (Adversarial learning) | 2024 | 40.2M | No | Yes | Yes | Yes | No |
-| 5 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Encoder-Decoder Transformer | 2024 | 938M | No | Yes | Yes | Yes | Yes |
-| 6 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | StyleTTS-based | 2024 | 82M | No | Yes | No | No | No |
-| 7 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes | Yes | No | No | No |
-| 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | Yes | No | No | No |
-| 9 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | Yes | No |
-| 10 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No |
-| 11 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | Yes | No |
-| 12 | **Xobdo Boroxa** | Community Model | - | 2024 | - | - | No | No | Yes | No |
-| 13 | **Vachana TTS (Gnani)** | [Gnani.ai](https://gnani.ai/) | Proprietary | 2024 | - | No | Yes | Yes | No | No |
-| 14 | **TuskByte-v1** | [TuskByte](https://huggingface.co/tuskbyte/nepali_male_v1) | VITS-based | 2024 | - | No | No | No | No | Yes |
-| 15 | **Oshara (XTTS v2 Nepali)** | [Oshara](https://huggingface.co/Oshara/xtts-v2-nepali) | Auto-regressive Transformer (Fine-tuned) | 2025 | 518M | Yes | Yes | No | No | Yes |
-| 16 | **FastSpeech 2 (Piper/ESPnet)** | [SMTIITM](https://huggingface.co/smtiitm/Fastspeech2_HS) / [Ampixa](https://huggingface.co/ampixa/real-nepali-v0.2-kala) | FastSpeech 2 / VITS (Piper) | 2024 | ~40M | No | Yes | Yes | Yes | Yes |
-| 17 | **Sooktam2 (F5-TTS)** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | No | No |
-| 18 | **Sonic v3** | [Cartesia](https://cartesia.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No |
+| # | Model | Source | Architecture Type | Year | Parameters | Voice Cloning | Hindi | Bengali | Assamese | Nepali | Urdu | Maithili |
+|:-:|-------|--------|-------------------|:----:|:----------:|:-------------:|:-----:|:-------:|:--------:|:------:|:----:|:--------:|
+| 1 | **XTTS v2** | [Coqui TTS](https://github.com/coqui-ai/TTS) | Auto-regressive Transformer | 2023 | 518M | Yes | Yes | No | No | No | No | No |
+| 2 | **Meta MMS** | [Meta Research](https://huggingface.co/facebook/mms-tts) | VITS-based | 2023 | 300M | No | Yes | Yes | Yes | No | Yes | Yes |
+| 3 | **Suno Bark** | [Suno AI](https://github.com/suno-ai/bark) | Transformer-based Text-to-Audio | 2023 | 550M | No | Yes | No | No | No | No | No |
+| 4 | **VITS Rasa 13** | [AI4Bharat](https://huggingface.co/ai4bharat/vits_rasa_13) | VITS (Adversarial learning) | 2024 | 40.2M | No | Yes | Yes | Yes | No | No | No |
+| 5 | **Indic Parler-TTS** | [AI4Bharat](https://huggingface.co/ai4bharat/indic-parler-tts) | Encoder-Decoder Transformer | 2024 | 938M | No | Yes | Yes | Yes | Yes | Yes | Yes |
+| 6 | **Kokoro** | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) | StyleTTS-based | 2024 | 82M | No | Yes | No | No | No | No | No |
+| 7 | **Kokoclone** | Community Model | StyleTTS-based | 2025 | 82M | Yes | Yes | No | No | No | No | No |
+| 8 | **Spark-TTS** | [Spark-TTS](https://github.com/QwenLM/Spark-TTS) | Qwen2.5 LLM + BiCodec | 2025 | 500M | Yes | Yes | No | No | No | No | No |
+| 9 | **Indic F5** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | Yes | No | No | No |
+| 10 | **Sarvam AI (Bulbul v3)** | [Sarvam AI](https://www.sarvam.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No | No | No |
+| 11 | **CosyVoice 3** | [Alibaba](https://github.com/FunAudioLLM/CosyVoice) | Flow Matching Transformer | 2024 | ~1B | Yes | No | Yes | Yes | No | No | No |
+| 12 | **Xobdo Boroxa** | Community Model | - | 2024 | - | - | No | No | Yes | No | No | No |
+| 13 | **Vachana TTS (Gnani)** | [Gnani.ai](https://gnani.ai/) | Proprietary | 2024 | - | No | Yes | Yes | No | No | No | No |
+| 14 | **TuskByte-v1** | [TuskByte](https://huggingface.co/tuskbyte/nepali_male_v1) | VITS-based | 2024 | - | No | No | No | No | Yes | No | No |
+| 15 | **Oshara (XTTS v2 Nepali)** | [Oshara](https://huggingface.co/Oshara/xtts-v2-nepali) | Auto-regressive Transformer (Fine-tuned) | 2025 | 518M | Yes | Yes | No | No | Yes | No | No |
+| 16 | **FastSpeech 2 (Piper/ESPnet)** | [SMTIITM](https://huggingface.co/smtiitm/Fastspeech2_HS) / [Ampixa](https://huggingface.co/ampixa/real-nepali-v0.2-kala) | FastSpeech 2 / VITS (Piper) | 2024 | ~40M | No | Yes | Yes | Yes | Yes | No | No |
+| 17 | **Sooktam2 (F5-TTS)** | [AI4Bharat](https://github.com/ai4bharat/IndicF5) | Flow-matching Transformer (F5-TTS) | 2025 | ~300M | Yes | Yes | Yes | No | No | No | No |
+| 18 | **Sonic v3** | [Cartesia](https://cartesia.ai/) | LLM-based TTS (API) | 2025 | N/A (API) | No | Yes | Yes | No | No | No | No |
+| 19 | **Syspin VITS** | [SYSPIN](https://huggingface.co/SYSPIN/vits_Maithili_Female) | VITS (Coqui TTS) | 2024 | ~40M | No | No | No | No | No | No | Yes |
 
 ---
 
@@ -72,11 +73,13 @@ A **phonetically balanced dataset** is a collection of text or audio data that c
 
 **Example:** Instead of a simple sentence like "Hello, my name is Jay," a phonetically dense Hindi sentence might be deliberately written to include loan words, nasal sounds, and aspirated consonants (e.g., "ज़ुबैर ने फ़र्ज़ निभाते हुए क़िले के पास से गुज़रते हुए एक ख़त पढ़ा।") to force the model to render rare phonemes like 'ज़', 'फ़', 'क़', and 'ख़'.
 
-To rigorously test the intelligibility and pronunciation of each model, we generated **Custom Phonetically Balanced Datasets** for four languages:
+To rigorously test the intelligibility and pronunciation of each model, we generated **Custom Phonetically Balanced Datasets** for six languages:
 - **Hindi** — `datasets/hindi_evaluation_set.json`
 - **Bengali** — `datasets/bengali_evaluation_set.json`
 - **Assamese** — `datasets/assamese_evaluation_set.json`
 - **Nepali** — `datasets/nepali_evaluation_set.json`
+- **Urdu** — `datasets/urdu_balanced_set.json`
+- **Maithili** — `datasets/maithili_balanced_set.json`
 
 Each dataset targets challenging phonemes specific to that language, including Velars, Gutturals, Retroflexes, Palatals, Nasals, and language-specific edge cases.
 
@@ -205,26 +208,27 @@ The Nepali evaluation set contains **20 carefully crafted sentences** targeting 
 
 Of the models in our benchmark, they support the following languages:
 
-| Model | Hindi | Bengali | Assamese | Nepali |
-|-------|:-----:|:-------:|:--------:|:------:|
-| **Kokoro** | Yes | No | No | No |
-| **Suno Bark** | Yes | No | No | No |
-| **XTTS v2** | Yes | No | No | No |
-| **Meta MMS** | Yes | Yes | Yes | No |
-| **VITS Rasa 13** | Yes | Yes | Yes | No |
-| **Indic Parler-TTS** | Yes | Yes | Yes | Yes |
-| **Kokoclone** | Yes | No | No | No |
-| **Spark TTS** | Yes | No | No | No |
-| **Indic F5** | No | Yes | Yes | No |
-| **Sarvam AI (Bulbul v3)** | Yes | Yes | No | No |
-| **CosyVoice 3** | No | Yes | Yes | No |
-| **Xobdo Boroxa** | No | No | Yes | No |
-| **Vachana TTS (Gnani)** | Yes | Yes | No | No |
-| **TuskByte-v1** | No | No | No | Yes |
-| **Oshara (XTTS v2 Nepali)** | Yes | No | No | Yes |
-| **FastSpeech 2 (Piper/ESPnet)** | Yes | Yes | Yes | Yes |
-| **Sooktam2 (F5-TTS)** | Yes | Yes | No | No |
-| **Sonic v3** | Yes | Yes | No | No |
+| Model | Hindi | Bengali | Assamese | Nepali | Urdu | Maithili |
+|-------|:-----:|:-------:|:--------:|:------:|:----:|:--------:|
+| **Kokoro** | Yes | No | No | No | No | No |
+| **Suno Bark** | Yes | No | No | No | No | No |
+| **XTTS v2** | Yes | No | No | No | No | No |
+| **Meta MMS** | Yes | Yes | Yes | No | Yes | Yes |
+| **VITS Rasa 13** | Yes | Yes | Yes | No | No | No |
+| **Indic Parler-TTS** | Yes | Yes | Yes | Yes | Yes | Yes |
+| **Kokoclone** | Yes | No | No | No | No | No |
+| **Spark TTS** | Yes | No | No | No | No | No |
+| **Indic F5** | No | Yes | Yes | No | No | No |
+| **Sarvam AI (Bulbul v3)** | Yes | Yes | No | No | No | No |
+| **CosyVoice 3** | No | Yes | Yes | No | No | No |
+| **Xobdo Boroxa** | No | No | Yes | No | No | No |
+| **Vachana TTS (Gnani)** | Yes | Yes | No | No | No | No |
+| **TuskByte-v1** | No | No | No | Yes | No | No |
+| **Oshara (XTTS v2 Nepali)** | Yes | No | No | Yes | No | No |
+| **FastSpeech 2 (Piper/ESPnet)** | Yes | Yes | Yes | Yes | No | No |
+| **Sooktam2 (F5-TTS)** | Yes | Yes | No | No | No | No |
+| **Sonic v3** | Yes | Yes | No | No | No | No |
+| **Syspin VITS** | No | No | No | No | No | Yes |
 
 ---
 
@@ -284,7 +288,7 @@ where:
 We evaluated the models through an automated **Whisper ASR pipeline** to compute the objective metrics — Word Error Rate (WER) and Character Error Rate (CER) — alongside human-evaluated Mean Opinion Score (MOS) for subjective quality.
 
 > [!NOTE]
-> For Hindi, WER/CER are evaluated using **Whisper Medium**. For Bengali and Assamese, we use **Gnani ASR (Prisma v2.5)** due to superior performance on regional Indic phonology. For Nepali, we use **Whisper Medium** with `language="nepali"`.
+> For Hindi, WER/CER are evaluated using **Whisper Medium**. For Bengali and Assamese, we use **Gnani ASR (Prisma v2.5)** due to superior performance on regional Indic phonology. For Nepali, we use **Whisper Medium** with `language="nepali"`. For Urdu, we use **Whisper Medium** with `language="urdu"`. For Maithili, we use **Gnani ASR (Prisma v2.5)** with `language_code="hi-IN"` as Maithili uses Devanagari script and is linguistically close to Hindi.
 
 ### Model Leaderboard (Hindi Phonetics)
 
@@ -348,6 +352,27 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 | 2 | **Oshara (XTTS v2 Nepali)** | 0.324 | 0.292 | 3.48 |
 | 3 | **FastSpeech (Kala-TTS)** | 0.391 | 0.208 | 2.30 |
 | 4 | **Indic Parler-TTS** | 0.397 | 0.252 | 0.65 |
+
+### Model Leaderboard (Urdu Phonetics)
+
+> [!NOTE]
+> WER and CER for Urdu evaluated using **Whisper Medium** (`language="urdu"`). MOS is a subjective human rating (1–5 scale) averaged across 20 phonetically balanced sentences.
+
+| Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
+|:----:|-------|:---------------:|:---------------:|:----------------:|
+| 1 | **Meta MMS** | **0.373** | **0.134** | - |
+| 2 | **Indic Parler-TTS** | 0.480 | 0.595 | - |
+
+### Model Leaderboard (Maithili Phonetics)
+
+> [!NOTE]
+> WER and CER for Maithili evaluated using **Gnani ASR (Prisma v2.5)** with `language_code="hi-IN"` (Hindi fallback, as Gnani does not natively support Maithili). MOS is a subjective human rating (1–5 scale) averaged across 20 phonetically balanced sentences.
+
+| Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
+|:----:|-------|:---------------:|:---------------:|:----------------:|
+| 1 | **Meta MMS (VITS)** | **0.831** | **0.402** | - |
+| 2 | **Syspin VITS** | 0.904 | 0.391 | - |
+| 3 | **Indic Parler-TTS** | 0.964 | 0.786 | - |
 
 
 ---
@@ -510,7 +535,8 @@ $$CER = \frac{S + D + I}{N}$$
 ### 3. Meta MMS (Massively Multilingual Speech)
 - **Architecture:** VITS-based model trained on 1,100+ languages.
 - **Key Feature:** Broadest language coverage of any TTS model.
-- **Results:** Consistent performance across diverse phonemes, slightly edging out VITS Rasa.
+- **Indian Language Support:** Hindi, Bengali, Assamese, Urdu, Maithili.
+- **Results:** Consistent performance across diverse phonemes. Urdu WER 0.373 / CER 0.134.
 - **Workspace:** [`models/meta-mms/`](models/meta-mms/)
 
 ### 4. VITS Rasa 13 (AI4Bharat)
@@ -521,6 +547,8 @@ $$CER = \frac{S + D + I}{N}$$
 ### 5. Indic Parler-TTS (AI4Bharat)
 - **Architecture:** Encoder-decoder transformer with DAC audio codec.
 - **Key Feature:** Natural language voice description prompting (e.g., "A female speaker with a calm voice").
+- **Indian Language Support:** Hindi, Bengali, Assamese, Nepali, Urdu, Maithili.
+- **Results:** Urdu WER 0.480 / CER 0.595.
 - **Workspace:** [`models/indic-parler/`](models/indic-parler/)
 
 ### 6. Suno Bark
@@ -605,6 +633,13 @@ $$CER = \frac{S + D + I}{N}$$
 - **Results:** Hindi WER 0.417 / CER 0.168, Bengali WER 0.218 / CER 0.077 (Gnani ASR).
 - **Workspace:** [`models/sonic/`](models/sonic/)
 
+### 19. Syspin VITS (Maithili)
+- **Architecture:** VITS-based model trained via Coqui TTS framework, fine-tuned for Maithili.
+- **Key Feature:** Dedicated Maithili female voice TTS model. One of the few models with native Maithili language support.
+- **Indian Language Support:** Maithili.
+- **Model:** [`SYSPIN/vits_Maithili_Female`](https://huggingface.co/SYSPIN/vits_Maithili_Female) on Hugging Face.
+- **Workspace:** [`models/syspin/`](models/syspin/)
+
 
 ## Repository Structure
 
@@ -621,7 +656,9 @@ Indian-TTS-models/
 │   ├── hindi_evaluation_set.json      # Custom phonetically balanced Hindi dataset
 │   ├── bengali_evaluation_set.json    # Custom phonetically balanced Bengali dataset
 │   ├── assamese_evaluation_set.json   # Custom phonetically balanced Assamese dataset
-│   └── nepali_evaluation_set.json     # Custom phonetically balanced Nepali dataset
+│   ├── nepali_evaluation_set.json     # Custom phonetically balanced Nepali dataset
+│   ├── urdu_balanced_set.json         # Custom phonetically balanced Urdu dataset
+│   └── maithili_balanced_set.json     # Custom phonetically balanced Maithili dataset
 │
 ├── docs/                              # Project-level documentation
 │   └── Indian_TTS_Models_Overview.xlsx
@@ -632,9 +669,9 @@ Indian-TTS-models/
 │   │   └── phonetic_evaluation/       # Bengali & Assamese audio ZIPs
 │   │
 │   ├── indic-parler/
-│   │   ├── notebooks/                 # Hindi, Bengali, Assamese & Nepali evaluation notebooks
+│   │   ├── notebooks/                 # Hindi, Bengali, Assamese, Nepali, Urdu & Maithili evaluation notebooks
 │   │   ├── samples/                   # Male & female Hindi audio samples
-│   │   └── phonetic_evaluation/       # Hindi, Bengali, Assamese & Nepali evaluation results
+│   │   └── phonetic_evaluation/       # Hindi, Bengali, Assamese, Nepali, Urdu & Maithili evaluation results
 │   │
 │   ├── kokoro/
 │   │   ├── notebooks/                 # kokoro.ipynb
@@ -643,9 +680,9 @@ Indian-TTS-models/
 │   │   └── assets/                    # Visual dashboards (PNG)
 │   │
 │   ├── meta-mms/
-│   │   ├── notebooks/                 # Hindi, Bengali, & Assamese evaluation notebooks
+│   │   ├── notebooks/                 # Hindi, Bengali, Assamese, Urdu & Maithili evaluation notebooks
 │   │   ├── samples/                   # Hindi audio sample
-│   │   └── phonetic_evaluation/       # Hindi, Bengali, & Assamese evaluation results
+│   │   └── phonetic_evaluation/       # Hindi, Bengali, Assamese, Urdu & Maithili evaluation results
 │   │
 │   ├── sarvam-ai/                     # [NEW] Sarvam AI — Bulbul v3 (API)
 │   │   ├── notebooks/                 # sarvam_ai_hindi_bengali.ipynb
@@ -706,6 +743,10 @@ Indian-TTS-models/
 │           ├── notebooks/             # spark_tts.ipynb
 │           └── outputs/               # TTS output ZIP
 │
+│   ├── syspin/                        # [NEW] Syspin VITS (Maithili)
+│   │   ├── notebooks/                 # syspin_maithili.ipynb
+│   │   └── phonetic_evaluation/       # Maithili audio output ZIP
+│
 └── utility_notebooks/                 # Bulk testing and evaluation scripts
     ├── Evaluating_TTS_models.ipynb
     ├── Testing_Indian_TTS_models.ipynb
@@ -714,10 +755,11 @@ Indian-TTS-models/
 
 ## Challenges & Shortcomings in Indic TTS Evaluation
 
-1. **Nepali Language Support:** Among the four target languages, Nepali had the least model support. The majority of evaluated models either lacked a dedicated Nepali language configuration or had not been trained on Nepali corpora, significantly limiting the pool of viable candidates for that language.
+1. **Nepali Language Support:** Among the six target languages, Nepali had the least model support. The majority of evaluated models either lacked a dedicated Nepali language configuration or had not been trained on Nepali corpora, significantly limiting the pool of viable candidates for that language.
 2. **Restricted Access:** Several models could not be fully evaluated due to gated or restricted access to pretrained checkpoints. This is a recurring limitation in the Indic TTS landscape, where model weights are often tied to institutional repositories or require approval-based access, impeding reproducible benchmarking.
-3. **Phonetic Accuracy:** Phonetic accuracy was a significant shortcoming across all four languages. Errors were observed in the handling of conjunct consonants, dependent vowel signs, nukta-modified characters, schwa deletion, and nasalization markers (anusvara/chandrabindu). These errors are attributable to shallow or language-agnostic G2P modules that do not encode the orthographic rules specific to each script.
-4. **Environment Standardization:** Standardizing the evaluation environment across 18 models with varying dependency requirements posed a practical challenge. Tokenizer-level incompatibilities, version conflicts in core libraries, and runtime constraints on cloud GPU environments affected the consistency of evaluation conditions across models.
+3. **Phonetic Accuracy:** Phonetic accuracy was a significant shortcoming across all six languages. Errors were observed in the handling of conjunct consonants, dependent vowel signs, nukta-modified characters, schwa deletion, and nasalization markers (anusvara/chandrabindu). These errors are attributable to shallow or language-agnostic G2P modules that do not encode the orthographic rules specific to each script.
+4. **Environment Standardization:** Standardizing the evaluation environment across 19 models with varying dependency requirements posed a practical challenge. Tokenizer-level incompatibilities, version conflicts in core libraries, and runtime constraints on cloud GPU environments affected the consistency of evaluation conditions across models.
+5. **Maithili ASR Limitations:** Gnani ASR does not natively support Maithili (`mai-IN`). We used Hindi (`hi-IN`) as a fallback since Maithili uses Devanagari script and shares significant phonological overlap with Hindi. This may introduce ASR-side errors that inflate WER/CER for Maithili evaluations.
 
 ---
 
@@ -768,7 +810,7 @@ This project is part of an internship at **[Kaliber.AI](https://kaliber.ai) / Ba
 - [Oshara](https://huggingface.co/Oshara) for the XTTS v2 Nepali fine-tuned model
 - [SMTIITM](https://huggingface.co/smtiitm) for the FastSpeech2_HS model for Indian languages
 - [Ampixa](https://huggingface.co/ampixa) for the Kala-TTS Nepali model
-- [Cartesia](https://cartesia.ai/) for the Sonic v3 TTS API
+- [Cartesia](https://cartesia.ai/) for the Sonic v3 TTS API\r\n- [SYSPIN](https://huggingface.co/SYSPIN) for the Maithili female VITS TTS model
 
 ---
 

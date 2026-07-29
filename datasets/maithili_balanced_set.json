@@ -1,0 +1,125 @@
+{
+  "language": "Maithili",
+  "sentences": [
+    {
+      "id": 1,
+      "sentence": "हमर गाममे आमक गाछ पर बहुत रास मञ्जरि आयल अछि।",
+      "romanization": "Hamar gam-me aamak gaachh par bahut raas manjari aayal achhi.",
+      "phonetic_focus": "Palatal aspirates (chh), nasals (m, n), glottal fricative (h)."
+    },
+    {
+      "id": 2,
+      "sentence": "ओना तँ ई काज बड्ड कठिन अछि, मुदा हम सब मिलकें कऽ लेब।",
+      "romanization": "Ona ta e kaaj badd kathin achhi, muda hum sab milke ka leb.",
+      "phonetic_focus": "Geminate retroflex (dd), retroflex aspirate (th), dental plosive (d)."
+    },
+    {
+      "id": 3,
+      "sentence": "भोरका बेरियाँ सूर्यक किरण सँ चारू दिस इजोत भऽ जाइत छैक।",
+      "romanization": "Bhorka beriyaan suryak kiran sa charu dis ijot bha jait chhaik.",
+      "phonetic_focus": "Labial aspirate (bh), sibilant (s), palatal affricates (ch, j)."
+    },
+    {
+      "id": 4,
+      "sentence": "किसान खेतमे धानक रोपनी कऽ रहल छथि आ पानि खूब पसि रहल अछि।",
+      "romanization": "Kisan khetme dhanak ropani ka rahal chhathi aa pani khoob pasi rahal achhi.",
+      "phonetic_focus": "Dental aspirate (dh), velar aspirate (kh), palatal aspirate (chh)."
+    },
+    {
+      "id": 5,
+      "sentence": "ठंढाक मौसममे रातिक समय आगिक तर बैसबाक मजा किछ आन होइछ।",
+      "romanization": "Thandhak mausam-me raatik samay aagik tar baisabak maja kichh aan hoichh.",
+      "phonetic_focus": "Retroflex aspirates (th, dh), sibilants (s), long vowels (aa, o)."
+    },
+    {
+      "id": 6,
+      "sentence": "विद्यालयक प्रांगणमे बच्चा सब खेलि रहल अछि आ मास्टर साहेब पढा रहल छथि।",
+      "romanization": "Vidyalayak prangan-me bachcha sab kheli rahal achhi aa master saheb padha rahal chhathi.",
+      "phonetic_focus": "Geminate palatal (chch), retroflex flap aspirate (dh), velar aspirate (kh)."
+    },
+    {
+      "id": 7,
+      "sentence": "जखन जोर सँ मेघ गर्जैत छैक, तखन मोनमे डर समा जाइत अछि।",
+      "romanization": "Jakhan jor sa megh garjait chhaik, takhan mon-me dar sama jait achhi.",
+      "phonetic_focus": "Velar aspirates (kh, gh), retroflex plosive (d), nasals (m, n)."
+    },
+    {
+      "id": 8,
+      "sentence": "मिथिलाक लोकगीत आ कला-संस्कृति पूरा विश्वमे प्रसिद्ध अछि।",
+      "romanization": "Mithilak lokgeet aa kala-sanskriti poora vishwame prasiddh achhi.",
+      "phonetic_focus": "Dental aspirates (th, ddh), sibilants (s, sh), liquids (l, r)."
+    },
+    {
+      "id": 9,
+      "sentence": "पोखरिक किनारमे बगुला मछरीक ताकमे ठाढ़ अछि।",
+      "romanization": "Pokharik kinarm-me bagula machharik taak-me thaadh achhi.",
+      "phonetic_focus": "Retroflex aspirates (th, dh), velar aspirate (kh), labial plosive (b)."
+    },
+    {
+      "id": 10,
+      "sentence": "छपरा सँ आबि रहल रेलगाड़ी स्टेशन पर समय सँ पहिलें पहुँच गेल।",
+      "romanization": "Chhapra sa aabi rahal railgaari station par samay sa pahile pahunch gel.",
+      "phonetic_focus": "Retroflex flap (R), palatal aspirates (chh), bilabial plosives (p, b)."
+    },
+    {
+      "id": 11,
+      "sentence": "चुल्हा पर दूध उफनि रहल अछि, जल्दी सँ ओकरा उतारि नीचाँ राखू।",
+      "romanization": "Chulha par doodh ufani rahal achhi, jaldi sa okara utaari nichaa raakhoo.",
+      "phonetic_focus": "Palatals (ch, chh), dental aspirate (dh), labial fricative (f)."
+    },
+    {
+      "id": 12,
+      "sentence": "गर्मीक दिनमे गाछक छाहरिमे सुतैत काल बड्ड निक निन्न अबैत अछि।",
+      "romanization": "Garmik din-me gaachhak chhahari-me sutait kaal badd nik ninn abait achhi.",
+      "phonetic_focus": "Palatal aspirate (chh), geminate retroflex (dd), nasals (n)."
+    },
+    {
+      "id": 13,
+      "sentence": "हमर गामक बाट बड्ड खराब अछि, बर्खाक समयमे कादो भऽ जाइछ।",
+      "romanization": "Hamar gaamak baat badd kharab achhi, barkhak samay-me kaado bha jaichh.",
+      "phonetic_focus": "Retroflex (T, dd), velar aspirate (kh), labial aspirate (bh)."
+    },
+    {
+      "id": 14,
+      "sentence": "बौआ, कनेक दोकान सँ चाउर आ दालि कीनि कऽ लऽ आवह।",
+      "romanization": "Bauaa, kanek dokaan sa chaur aa daali keeni ka la aavah.",
+      "phonetic_focus": "Diphthongs (au), palatal (ch), dentals (d, l)."
+    },
+    {
+      "id": 15,
+      "sentence": "पंडित जी मन्दिरमे पूजा कऽ रहल छथि आ शंखक आवाज चारू कात गुंजि रहल अछि।",
+      "romanization": "Pandit ji mandir-me pooja ka rahal chhathi aa shankhak aawaj chaaru kaat gunji rahal achhi.",
+      "phonetic_focus": "Retroflex (nd), palatal aspirate (chh), velar aspirate (kh)."
+    },
+    {
+      "id": 16,
+      "sentence": "नदीक धार बड्ड तेज अछि, नाव खेबनिहार केँ बहुत धियान राखै पड़ैत छैक।",
+      "romanization": "Nadeek dhaar badd tej achhi, naav khebanihaar ke bahut dhiyaan raakhai parait chhaik.",
+      "phonetic_focus": "Dental aspirate (dh), geminate (dd), retroflex flap (R), velar aspirate (kh)."
+    },
+    {
+      "id": 17,
+      "sentence": "खेतमे काज करैत-करैत किसानक देह पसीना सँ भीजि गेल अछि।",
+      "romanization": "Khet-me kaaj karait-karait kisaanak deh paseena sa bheeji gel achhi.",
+      "phonetic_focus": "Velar aspirate (kh), labial aspirate (bh), sibilants (s)."
+    },
+    {
+      "id": 18,
+      "sentence": "साँझक समय भेल, आब सब गोटे अपन-अपन घर दिना घुरि रहल छथि।",
+      "romanization": "Saanjhak samay bhel, aab sab gote apan-apan ghar dina ghuri rahal chhathi.",
+      "phonetic_focus": "Nasalized vowels, palatal aspirate (jh, chh), velar aspirate (gh)."
+    },
+    {
+      "id": 19,
+      "sentence": "चौरक रोटि आ तोरीक साग खाइबामे जे स्वाद अछि, से आन कतौ नहि।",
+      "romanization": "Chaurak roti aa torik saag khaiba-me je swaad achhi, se aan katau nahi.",
+      "phonetic_focus": "Palatals (ch), retroflex (T), velar aspirate (kh), labials (b, w)."
+    },
+    {
+      "id": 20,
+      "sentence": "जाड़क महिनामे भोर भोर कुहासा एतेक रहैछ जे किछु नहि सूझैत अछि।",
+      "romanization": "Jaarak mahina-me bhor bhor kuhaasa etek rahaichh je kichhu nahi soojhait achhi.",
+      "phonetic_focus": "Retroflex flap (R), labial aspirate (bh), palatal aspirates (chh, jh)."
+    }
+  ]
+}

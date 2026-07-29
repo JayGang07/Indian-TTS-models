@@ -1,0 +1,125 @@
+{
+  "language": "Urdu",
+  "sentences": [
+    {
+      "id": 1,
+      "sentence": "غریب اور محنتی کسان اپنے کھیتوں میں بیج بو رہے ہیں۔",
+      "romanization": "Ghareeb aur mehnti kisan apne kheton mein beej bo rahe hain.",
+      "phonetic_focus": "Velar fricative (gh), aspirates (kh), nasals (m, n)."
+    },
+    {
+      "id": 2,
+      "sentence": "چڑیا گھر میں شیر، ہاتھی، اور رنگ برنگے پرندے موجود تھے۔",
+      "romanization": "Chiriya ghar mein sher, hathi, aur rang birange parinde maujood the.",
+      "phonetic_focus": "Retroflex flap (R), aspirates (gh, th), palatals (ch, sh)."
+    },
+    {
+      "id": 3,
+      "sentence": "طوفان کی وجہ سے پرانی دیوار اچانک گر پڑی اور ٹیلی ویژن بند ہو گیا۔",
+      "romanization": "Toofan ki wajah se purani deewar achanak gir pari aur television band ho gaya.",
+      "phonetic_focus": "Fricatives (f, zh), retroflex flap (R), plosives (p, d, g)."
+    },
+    {
+      "id": 4,
+      "sentence": "استاد نے وقت پر طالب علموں کو ریاضی کا مشکل سبق پڑھایا۔",
+      "romanization": "Ustad ne waqt par talib ilmon ko riyazi ka mushkil sabaq parhaya.",
+      "phonetic_focus": "Uvular plosive (q), fricative (z), retroflex aspirate (Rh)."
+    },
+    {
+      "id": 5,
+      "sentence": "خزاں کے موسم میں درختوں سے زرد پتے جھڑنے لگتے ہیں۔",
+      "romanization": "Khizan ke mausam mein darakhton se zard patte jharne lagte hain.",
+      "phonetic_focus": "Velar fricative (kh), alveolar fricative (z), aspirate (jh)."
+    },
+    {
+      "id": 6,
+      "sentence": "وہ بازار سے تازہ پھل، سبزیاں اور گوشت خرید کر لایا۔",
+      "romanization": "Woh bazar se taza phal, sabziyan aur gosht khareed kar laya.",
+      "phonetic_focus": "Labial aspirate (ph), fricatives (z, sh), glottal fricative (h)."
+    },
+    {
+      "id": 7,
+      "sentence": "دفتر میں کام کرنے والے ملازمین چھٹی کے دن آرام کرتے ہیں۔",
+      "romanization": "Daftar mein kaam karne wale mulazimeen chhutti ke din aaram karte hain.",
+      "phonetic_focus": "Palatal aspirate (chh), retroflex (T), fricative (f)."
+    },
+    {
+      "id": 8,
+      "sentence": "تیز بارش کے بعد آسمان پر خوبصورت قوسِ قزح نمودار ہوئی۔",
+      "romanization": "Tez barish ke baad aasman par khoobsurat qaus-e-qazah namoodar hui.",
+      "phonetic_focus": "Sibilants (s, sh), uvular plosive (q), fricatives (z, kh)."
+    },
+    {
+      "id": 9,
+      "sentence": "گاڑی چلاتے وقت ہمیشہ ٹریفک کے اصولوں کی پابندی کرنی چاہیے۔",
+      "romanization": "Gaari chalate waqt hamesha traffic ke usoolon ki pabandi karni chahiye.",
+      "phonetic_focus": "Retroflex (R, T), plosives (g, b), palatal affricate (ch)."
+    },
+    {
+      "id": 10,
+      "sentence": "رات کے اندھیرے میں چاند کی چاندنی بہت دلفریب لگ رہی تھی۔",
+      "romanization": "Raat ke andhere mein chaand ki chandni bohat dilfareb lag rahi thi.",
+      "phonetic_focus": "Nasalized vowels (aan), dental aspirates (dh, th), alveolar trill (r)."
+    },
+    {
+      "id": 11,
+      "sentence": "پھولوں کی خوشبو سے سارا باغ مہک اٹھا اور بھنورے گنگنانے لگے۔",
+      "romanization": "Phoolon ki khushboo se sara bagh mehak utha aur bhanwre gungunane lage.",
+      "phonetic_focus": "Aspirates (ph, bh), fricatives (kh, gh), nasals (n, m)."
+    },
+    {
+      "id": 12,
+      "sentence": "ظالم بادشاہ نے غریب عوام پر بے پناہ ظلم و ستم ڈھائے۔",
+      "romanization": "Zalim badshah ne ghareeb awam par be-panah zulm o sitam dhaye.",
+      "phonetic_focus": "Fricatives (z, zh, gh), retroflex aspirate (dh)."
+    },
+    {
+      "id": 13,
+      "sentence": "سردیوں کی ٹھٹھرتی راتوں میں لحاف کے اندر سونا بہت اچھا لگتا ہے۔",
+      "romanization": "Sardiyon ki thithurti raaton mein lihaaf ke andar sona bohat achha lagta hai.",
+      "phonetic_focus": "Retroflex aspirates (th), palatal aspirate (chh), fricative (f)."
+    },
+    {
+      "id": 14,
+      "sentence": "ضیافت میں قسم قسم کے لذیذ پکوان اور میٹھے شربت پیش کیے گئے۔",
+      "romanization": "Ziyafat mein qisam qisam ke lazeez pakwan aur meethe sharbat pesh kiye gaye.",
+      "phonetic_focus": "Fricatives (z, f), uvular (q), retroflex aspirate (th)."
+    },
+    {
+      "id": 15,
+      "sentence": "کھلاڑیوں نے میدان میں شاندار کارکردگی کا مظاہرہ کر کے میچ جیت لیا۔",
+      "romanization": "Khilariyon ne maidan mein shandar karkardagi ka muzahira kar ke match jeet liya.",
+      "phonetic_focus": "Aspirate (kh), retroflex flap (R), fricative (z), palatal (ch)."
+    },
+    {
+      "id": 16,
+      "sentence": "ڈھولک کی تھاپ پر لڑکیاں خوشی سے لوک گیت گا رہی تھیں۔",
+      "romanization": "Dholak ki thaap par larkiyan khushi se lok geet ga rahi theen.",
+      "phonetic_focus": "Retroflex aspirate (dh), dental aspirate (th), retroflex flap (R)."
+    },
+    {
+      "id": 17,
+      "sentence": "صوفے پر بیٹھی بلی دودھ پینے کے بعد مزے سے خراٹے لے رہی تھی۔",
+      "romanization": "Sofay par baithi billi doodh peenay ke baad mazay se kharatay le rahi thi.",
+      "phonetic_focus": "Fricatives (s, f, z, kh), dental aspirate (dh)."
+    },
+    {
+      "id": 18,
+      "sentence": "ڈاکٹر نے مریض کو روزانہ صبح جلدی اٹھ کر ورزش کرنے کی تاکید کی۔",
+      "romanization": "Doctor ne mareez ko rozana subah jaldi uth kar warzish karne ki takeed ki.",
+      "phonetic_focus": "Retroflex (D), fricatives (z, sh), aspirate (th)."
+    },
+    {
+      "id": 19,
+      "sentence": "چور اندھیرے کا فائدہ اٹھا کر تالا توڑنے میں کامیاب ہو گیا۔",
+      "romanization": "Chor andhere ka faida utha kar taala torne mein kamyab ho gaya.",
+      "phonetic_focus": "Palatal (ch), dental aspirate (dh), retroflex aspirate (th), retroflex flap (R)."
+    },
+    {
+      "id": 20,
+      "sentence": "پہاڑوں کی چوٹیوں پر جمی سفید برف دھوپ میں چمک رہی تھی۔",
+      "romanization": "Paharon ki chotiyon par jami safaid barf dhoop mein chamak rahi thi.",
+      "phonetic_focus": "Retroflex flap (R), retroflex (T), fricative (f), dental aspirate (dh), palatal (ch)."
+    }
+  ]
+}
