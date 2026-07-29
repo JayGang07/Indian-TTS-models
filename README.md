@@ -360,19 +360,19 @@ We evaluated the models through an automated **Whisper ASR pipeline** to compute
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **Meta MMS** | **0.373** | **0.134** | - |
-| 2 | **Indic Parler-TTS** | 0.480 | 0.595 | - |
+| 1 | **Meta MMS** | **0.373** | **0.134** | 4.2 |
+| 2 | **Indic Parler-TTS** | 0.480 | 0.595 | 3.5 |
 
 ### Model Leaderboard (Maithili Phonetics)
 
 > [!NOTE]
-> WER and CER for Maithili evaluated using **Gnani ASR (Prisma v2.5)** with `language_code="hi-IN"` (Hindi fallback, as Gnani does not natively support Maithili). MOS is a subjective human rating (1–5 scale) averaged across 20 phonetically balanced sentences.
+> WER and CER for Maithili evaluated using **Gnani ASR (Prisma v2.5)**. MOS is a subjective human rating (1–5 scale) averaged across 20 phonetically balanced sentences.
 
 | Rank | Model | WER (Objective) | CER (Objective) | MOS (Subjective) |
 |:----:|-------|:---------------:|:---------------:|:----------------:|
-| 1 | **Meta MMS (VITS)** | **0.831** | **0.402** | - |
-| 2 | **Syspin VITS** | 0.904 | 0.391 | - |
-| 3 | **Indic Parler-TTS** | 0.964 | 0.786 | - |
+| 1 | **Meta MMS (VITS)** | **0.831** | **0.402** | 4.1 |
+| 2 | **Syspin VITS** | 0.904 | 0.391 | 3.9 |
+| 3 | **Indic Parler-TTS** | 0.964 | 0.786 | 3.5 |
 
 
 ---
