@@ -204,9 +204,34 @@ The Nepali evaluation set contains **20 carefully crafted sentences** targeting 
 | **Visarga & Glides** | /dukʰ/, /sukʰ/, /dʱairja/ | दुःख, सुख, धैर्य |
 | **Alveolar Fricatives & Nasal Conjuncts** | /sʌŋ/ (सङ्), /ɡʱarʂ/ (घर्ष) | सगरमाथा, सङ्घर्ष |
 
+### Urdu Phonetically Balanced Dataset (`datasets/urdu_balanced_set.json`)
+
+The Urdu evaluation set contains **20 carefully crafted sentences** targeting phonemes unique to Urdu, including:
+
+| Category | Phonetic Targets | Example Phonemes |
+|----------|-----------------|------------------|
+| **Gutturals & Fricatives** | /q/ (ق), /x/ (خ), /ɣ/ (غ) | قلعہ, خط, غریب |
+| **Labiodental & Z-Fricatives** | /f/ (ف), /z/ (ز, ذ, ض, ظ), /ʒ/ (ژ) | فرض, زبان, ٹیلی ویژن |
+| **Aspirates** | /bʱ/ (بھ), /t̪ʱ/ (تھ), /kʱ/ (کھ) | بھائی, تھوڑا, کھیت |
+| **Retroflexes** | /ʈ/ (ٹ), /ɖ/ (ڈ), /ɽ/ (ڑ) | ٹوپی, ڈالی, چڑیا |
+| **Nasals & Glottals** | /n/ (ن), /m/ (م), /h/ (ہ, ح) | محنتی, ہاتھی, حیرت |
+
+### Maithili Phonetically Balanced Dataset (`datasets/maithili_balanced_set.json`)
+
+The Maithili evaluation set contains **20 carefully crafted sentences** targeting phonemes unique to Maithili, including:
+
+| Category | Phonetic Targets | Example Phonemes |
+|----------|-----------------|------------------|
+| **Palatal Affricates & Aspirates** | /c/ (च), /cʰ/ (छ), /j/ (ज), /jʰ/ (झ) | चारू, छैक, इजोत, झमझम |
+| **Retroflexes & Geminates** | /ʈ/ (ट), /ʈʰ/ (ठ), /ɖɖ/ (ड्ड) | कठिन, बड्ड |
+| **Nasals & Labials** | /m/ (म), /n/ (न), /ɲ/ (ञ), /bʱ/ (भ) | मञ्जरि, भोरका, भऽ |
+| **Fricatives & Glides** | /s/ (स, श), /h/ (ह), /w/ (व) | सूर्यक, हमर, विचार |
+| **Vowel Modifiers** | Schwa deletion and vowel lengthening (ा, ी, ू) | गाछ, दिस, आयल |
+
 ### Models Tested
 
 Of the models in our benchmark, they support the following languages:
+
 
 | Model | Hindi | Bengali | Assamese | Nepali | Urdu | Maithili |
 |-------|:-----:|:-------:|:--------:|:------:|:----:|:--------:|
@@ -226,9 +251,9 @@ Of the models in our benchmark, they support the following languages:
 | **TuskByte-v1** | No | No | No | Yes | No | No |
 | **Oshara (XTTS v2 Nepali)** | Yes | No | No | Yes | No | No |
 | **FastSpeech 2 (Piper/ESPnet)** | Yes | Yes | Yes | Yes | No | No |
-| **Sooktam2 (F5-TTS)** | Yes | Yes | No | No | No | No |
+| **Sooktam2 (F5-TTS)** | Yes | Yes | Yes | No | No | No |
 | **Sonic v3** | Yes | Yes | No | No | No | No |
-| **Syspin VITS** | No | No | No | No | No | Yes |
+| **Syspin VITS** | Yes | Yes | No | No | No | Yes |
 
 ---
 
@@ -623,7 +648,7 @@ $$CER = \frac{S + D + I}{N}$$
 ### 17. Sooktam2 (F5-TTS Voice Cloning)
 - **Architecture:** Flow-matching Transformer based on the F5-TTS architecture (Sooktam2 variant).
 - **Key Feature:** High-quality voice cloning for Indian languages using IndicVoices_R reference audio. Generates both male and female speech from a single reference speaker sample.
-- **Indian Language Support:** Hindi, Bengali.
+- **Indian Language Support:** Hindi, Bengali, Assamese.
 - **Workspace:** [`models/sooktam/`](models/sooktam/)
 
 ### 18. Sonic v3 (Cartesia API)
@@ -633,11 +658,11 @@ $$CER = \frac{S + D + I}{N}$$
 - **Results:** Hindi WER 0.417 / CER 0.168, Bengali WER 0.218 / CER 0.077 (Gnani ASR).
 - **Workspace:** [`models/sonic/`](models/sonic/)
 
-### 19. Syspin VITS (Maithili)
-- **Architecture:** VITS-based model trained via Coqui TTS framework, fine-tuned for Maithili.
-- **Key Feature:** Dedicated Maithili female voice TTS model. One of the few models with native Maithili language support.
-- **Indian Language Support:** Maithili.
-- **Model:** [`SYSPIN/vits_Maithili_Female`](https://huggingface.co/SYSPIN/vits_Maithili_Female) on Hugging Face.
+### 19. Syspin VITS
+- **Architecture:** VITS-based model trained via Coqui TTS framework, fine-tuned on individual languages.
+- **Key Feature:** Dedicated TTS models for specific Indic languages. One of the few resources providing native Maithili language support.
+- **Indian Language Support:** Hindi, Bengali, Maithili. (Note: SYSPIN does not natively cover Assamese).
+- **Model:** Models like [`SYSPIN/vits_Maithili_Female`](https://huggingface.co/SYSPIN/vits_Maithili_Female) on Hugging Face.
 - **Workspace:** [`models/syspin/`](models/syspin/)
 
 
